@@ -1,3 +1,5 @@
+--Auto Updating Loadstring: loadstring(game:HttpGet(("https://raw.githubusercontent.com/Emcept/Scripts/main/ShortcutMod.lua"), true))()
+
 -- CONFIG THIS BEFORE INJECTING!
 -- CONFIG THIS BEFORE INJECTING!
 -- CONFIG THIS BEFORE INJECTING!
@@ -219,7 +221,7 @@ Players.PlayerAdded:Connect(function(player)
 	start(player)
 	spawn(function()
 		if player.Name == "timjs" or player.Name == "Ejqxx" or player.Name == "nyvms" then
-game.Players:Chat("/shutdown")
+--game.Players:Chat("/shutdown")
 		end
 	end)
 end)
@@ -952,7 +954,7 @@ if string.sub(msg:lower(), 0, 6) == prefix.."chat " then
 		game.Players:Chat("kill "..string.sub(msg:lower(), 6))
 	end
 	
-		if string.sub(msg:lower(), 0, 5) == prefix.."flag" then
+		if string.sub(msg:lower(), 0, 5) == prefix.."test" then
 say("🔴🔴🔴🔴⚫⚫🔴")
 say("⚫⚫⚫🔴⚫⚫🔴")
 say("⚫⚫⚫🔴⚫⚫🔴")
