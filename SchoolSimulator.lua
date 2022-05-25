@@ -466,6 +466,16 @@ UICorner_26.Parent = open_2
 local function HVUEQQ_fake_script() -- Main.MainScript 
 	local script = Instance.new('LocalScript', Main)
 	
+	--Loadstring: loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/SchoolSimulator.lua')()
+
+	local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+
+	game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+		if State == Enum.TeleportState.Started then
+			queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/SchoolSimulator.lua')()")
+		end
+	end)
+	
 		local keys = {
 			closeallkey = 'm',
 			openallkey = 'n',
