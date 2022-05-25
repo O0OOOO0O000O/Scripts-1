@@ -2,7 +2,6 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-
 local UltraXSchoolSimulator = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
