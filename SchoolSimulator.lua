@@ -1,3 +1,6 @@
+-- School Simulator Script made by Emmy#0377  --
+
+
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
@@ -459,10 +462,8 @@ UICorner_26.Parent = open_2
 
 -- Scripts:
 
-local function TDWBN_fake_script() -- Main.MainScript 
+local function HVUEQQ_fake_script() -- Main.MainScript 
 	local script = Instance.new('LocalScript', Main)
-
-	-- School Simulator Script made by Emmy#0377  --
 	
 		local keys = {
 			closeallkey = 'm',
@@ -646,7 +647,7 @@ local function TDWBN_fake_script() -- Main.MainScript
 	
 		local ui = script.Parent
 	
-		ui.unlocktools.MouseButton1Click:Connect(function()
+		ui:WaitForChild'unlocktools'.MouseButton1Click:Connect(function()
 			pcall(function()
 				local mt = getrawmetatable(game);
 				local old = mt.__namecall
@@ -669,90 +670,90 @@ local function TDWBN_fake_script() -- Main.MainScript
 			end)
 		end)
 	
-		ui.getredduck.MouseButton1Click:Connect(function()
+	ui:WaitForChild'getredduck'.MouseButton1Click:Connect(function()
 			game.Lighting.E:FireServer()
 		end)
 	
-		ui.lockalllockers.MouseButton1Click:Connect(function()
+	ui:WaitForChild'lockalllockers'.MouseButton1Click:Connect(function()
 			lockall()
 		end)
 	
-		ui.unlockalllockers.MouseButton1Click:Connect(function()
+	ui:WaitForChild'unlockalllockers'.MouseButton1Click:Connect(function()
 			unlockall()
 		end)
 	
-		ui.togglelockalllockers.MouseButton1Click:Connect(function()
+	uiui:WaitForChild'togglelockalllockers'.MouseButton1Click:Connect(function()
 			togglelockall()
 		end)
 	
-		ui.toggleopenalllockers.MouseButton1Click:Connect(function()
+	ui:WaitForChild'toggleopenalllockers'.MouseButton1Click:Connect(function()
 			toggleopenall()
 		end)
 	
-		ui.openalllockers.MouseButton1Click:Connect(function()
+	ui:WaitForChild'openalllockers'.MouseButton1Click:Connect(function()
 			openall()
 		end)
 	
-		ui.closealllockers.MouseButton1Click:Connect(function()
+	ui:WaitForChild'closealllockers'.MouseButton1Click:Connect(function()
 			closeall()
 		end)
 	
 	
 	
 	
-		ui.togglelockalllockerskey.Changed:Connect(function()
+	ui:WaitForChild'togglelockalllockerskey'.Changed:Connect(function()
 			if ui.togglelockalllockerskey.Text ~= '' then
 				keys.togglelockallkey = ui.togglelockalllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.lockalllockerskey.Changed:Connect(function()
+	ui:WaitForChild'lockalllockerskey'.Changed:Connect(function()
 			if ui.lockalllockerskey.Text ~= '' then
 				keys.lockallkey = ui.lockalllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.unlockalllockerskey.Changed:Connect(function()
+	ui:WaitForChild'unlockalllockerskey'.Changed:Connect(function()
 			if ui.unlockalllockerskey.Text ~= '' then
 				keys.unlockallkey = ui.unlockalllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.toggleopenalllockerskey.Changed:Connect(function()
+	ui:WaitForChild'toggleopenalllockerskey'.Changed:Connect(function()
 			if ui.toggleopenalllockerskey.Text ~= '' then
 				keys.toggleopenallkey = ui.toggleopenalllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.openalllockerskey.Changed:Connect(function()
+	ui:WaitForChild'openalllockerskey'.Changed:Connect(function()
 			if ui.openalllockerskey.Text ~= '' then
 				keys.openallkey = ui.openalllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.closealllockerskey.Changed:Connect(function()
+	ui:WaitForChild'closealllockerskey'.Changed:Connect(function()
 			if ui.closealllockerskey.Text ~= '' then
 				keys.closeallkey = ui.closealllockerskey.Text:lower()
 			end
 		end)
 	
-		ui.lockkey.Changed:Connect(function()
+	ui:WaitForChild'lockkey'.Changed:Connect(function()
 			if ui.lockkey.Text ~= '' then
 				keys.lockkey = ui.lockkey.Text:lower()
 			end
 		end)
 	
-		ui.openkey.Changed:Connect(function()
+	ui:WaitForChild'openkey'.Changed:Connect(function()
 			if ui.openkey.Text ~= '' then
 				keys.openkey = ui.openkey.Text:lower()
 			end
 		end)
 	
-		ui.loadiy.MouseButton1Click:Connect(function()
+	ui:WaitForChild'loadiy'.MouseButton1Click:Connect(function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 		end)
 	
-		ui.returntonormal.MouseButton1Click:Connect(function()
+	ui:WaitForChild'returntonormal'.MouseButton1Click:Connect(function()
 			ui.toggleopenalllockerskey.Text = 'B'
 			ui.togglelockalllockerskey.Text = 'Z'
 			ui.openalllockerskey.Text = 'N'
@@ -763,7 +764,7 @@ local function TDWBN_fake_script() -- Main.MainScript
 			ui.openkey.Text = 'E'
 		end)
 	
-		ui.Parent.open.MouseButton1Click:Connect(function()
+	ui.Parent:WaitForChild'open'.MouseButton1Click:Connect(function()
 			if ui.Visible == true then
 				ui.Visible = false
 				ui.Parent.open.Text = 'Open'
@@ -773,11 +774,11 @@ local function TDWBN_fake_script() -- Main.MainScript
 			end
 		end)
 	
-		ui.Topbar.Close.MouseButton1Click:Connect(function()
+	ui:WaitForChild'Topbar':WaitForChild'Close'.MouseButton1Click:Connect(function()
 			ui.Visible = false
 		end)
 	
-		ui.rejoin.MouseButton1Click:Connect(function()
+	ui:WaitForChild'rejoin'.MouseButton1Click:Connect(function()
 			local Players = game.Players
 			if #Players:GetPlayers() <= 1 then
 				Players.LocalPlayer:Kick("\nRejoining...")
@@ -788,7 +789,7 @@ local function TDWBN_fake_script() -- Main.MainScript
 			end
 		end)
 	
-		ui.serverhop.MouseButton1Click:Connect(function()
+	ui:WaitForChild'serverhop'.MouseButton1Click:Connect(function()
 			local x = {}
 			for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
 				if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
@@ -839,4 +840,4 @@ local function TDWBN_fake_script() -- Main.MainScript
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(TDWBN_fake_script)()
+coroutine.wrap(HVUEQQ_fake_script)()
