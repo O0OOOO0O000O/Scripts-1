@@ -686,7 +686,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 			unlockall()
 		end)
 	
-	uiui:WaitForChild'togglelockalllockers'.MouseButton1Click:Connect(function()
+	ui:WaitForChild'togglelockalllockers'.MouseButton1Click:Connect(function()
 			togglelockall()
 		end)
 	
