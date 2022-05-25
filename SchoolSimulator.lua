@@ -655,10 +655,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 			end
 		end)
 	
-	task.wait(5)
-	
 	local ui = script.Parent
-	
 	
 		ui:WaitForChild'unlocktools'.MouseButton1Click:Connect(function()
 			pcall(function()
