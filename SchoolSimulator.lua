@@ -644,12 +644,10 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 			end
 		end)
 	
+	task.wait(5)
 	
 	local ui = script.Parent
 	
-	if not ui.Parent:IsLoaded() then
-		ui.Parent.Loaded:Wait()
-	end
 	
 		ui:WaitForChild'unlocktools'.MouseButton1Click:Connect(function()
 			pcall(function()
