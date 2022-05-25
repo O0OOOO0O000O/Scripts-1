@@ -1,6 +1,5 @@
 -- School Simulator Script made by Emmy#0377  --
 
-
 pcall(function()
 	if not game:IsLoaded() then
 	game.Loaded:Wait()
