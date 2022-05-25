@@ -460,11 +460,15 @@ UICorner_26.Parent = open_2
 
 -- Scripts:
 
-local function QQHPYIQ_fake_script() -- Main.MainScript 
+local function TDWBN_fake_script() -- Main.MainScript 
 	local script = Instance.new('LocalScript', Main)
 
 	
-		-- School Simulator Script made by Emmy#0377  --
+	-- School Simulator Script made by Emmy#0377  --
+	
+	if not game:IsLoaded() then
+		game.Loaded:Wait()
+	end
 	
 		local keys = {
 			closeallkey = 'm',
@@ -841,4 +845,4 @@ local function QQHPYIQ_fake_script() -- Main.MainScript
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(QQHPYIQ_fake_script)()
+coroutine.wrap(TDWBN_fake_script)()
