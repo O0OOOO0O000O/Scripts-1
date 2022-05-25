@@ -1,9 +1,11 @@
 -- School Simulator Script made by Emmy#0377  --
 
 
-if not game:IsLoaded() then
+pcall(function()
+	if not game:IsLoaded() then
 	game.Loaded:Wait()
-end
+	end
+end)
 
 local UltraXSchoolSimulator = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
