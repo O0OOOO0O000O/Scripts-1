@@ -1,7 +1,7 @@
--- Gui to Lua
--- Version: 3.2
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
 
--- Instances:
 
 local UltraXSchoolSimulator = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
@@ -463,12 +463,7 @@ UICorner_26.Parent = open_2
 local function TDWBN_fake_script() -- Main.MainScript 
 	local script = Instance.new('LocalScript', Main)
 
-	
 	-- School Simulator Script made by Emmy#0377  --
-	
-	if not game:IsLoaded() then
-		game.Loaded:Wait()
-	end
 	
 		local keys = {
 			closeallkey = 'm',
