@@ -558,9 +558,11 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 				wait(1.2)
 				lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 				for i = 1, 10 do
+				unlockall()
 					for i, v in pairs(game.Workspace:GetDescendants()) do
 						if v:FindFirstChild'Locker' and v:IsA'Part' and v.Name == 'Hinge' then
 							if v.Orientation.Y == -90 or v.Orientation.Y == 90 or v.Orientation.Y == 180 or v.Orientation.Y == 0 then
+								unlockall()
 								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
 								task.wait(.1)
 								fireclickdetector(v.ClickDetector)
@@ -582,6 +584,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 				lastpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 				for i, v in pairs(game.Workspace:GetDescendants()) do
 					if v:FindFirstChild'Locker' and v:IsA'Part' and v.Name == 'Hinge' then
+						unlockall()
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
 						task.wait(.1)
 						fireclickdetector(v.ClickDetector)
