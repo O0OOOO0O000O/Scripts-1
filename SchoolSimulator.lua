@@ -570,7 +570,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 						end
 					end
 				end
-				task.wait(1)
+				task.wait(.15)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
 			end
 			deb = false
@@ -590,7 +590,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 						fireclickdetector(v.ClickDetector)
 					end
 				end
-				task.wait(1)
+				task.wait(.15)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
 			end
 			deb = false
@@ -611,7 +611,7 @@ local function HVUEQQ_fake_script() -- Main.MainScript
 						end
 					end
 				end
-				task.wait(1)
+				task.wait(.15)
 				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = lastpos
 			end
 			deb = false
