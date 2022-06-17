@@ -248,3 +248,12 @@ spawn(function()
 		end
 	end
 end)
+
+--[[
+Example usage:
+
+loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/NotificationScript.lua')()
+
+Notify('a', 'script finally works', 5)
+
+]]
