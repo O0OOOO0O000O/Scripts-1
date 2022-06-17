@@ -84,6 +84,15 @@ amount.TextSize = 14.000
 amount.TextTransparency = 1.000
 amount.TextWrapped = true
 
+local val = Instance.new'NumberValue'
+val.Parent = Template
+val.Name = 'duration'
+
+text.AutomaticSize = 'X'
+title.AutomaticSize = 'X'
+Template.AutomaticSize = 'XY'
+text.AnchorPoint = Vector2.new(0.5, 1)
+title.AnchorPoint = Vector2.new(0.5, 0)
 
 
 
@@ -94,13 +103,12 @@ if not game:IsLoaded() then
 end
 
 local notifs = {}
-local funcs = {}
 
 local folder = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Notifications
 
 local notifcount = 0
 
-function funcs.Notify(a, b, duration)
+function Notify(a, b, duration)
 	local run = true
 	local broke = false
 
@@ -237,5 +245,3 @@ spawn(function()
 		end
 	end
 end)
-
-return funcs
