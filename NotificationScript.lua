@@ -85,24 +85,24 @@ amount.TextTransparency = 1.000
 amount.TextWrapped = true
 
 
-local template = game.Players.LocalPlayer.PlayerGui.NotificationsUI:WaitForChild'Template'
+local template = script:WaitForChild('Template')
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
 local notifs = {}
-local library = {}
+local funcs = {}
 
-local notifications = game.Players.LocalPlayer.PlayerGui.NotificationsUI:WaitForChild'Notifications'
+local folder = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Notifications
 
 local notifcount = 0
 
-local library:Notify = function(a, b, duration)
+function funcs.Notify(a, b, duration)
 	local run = true
 	local broke = false
 
-	for i, v in pairs(notifications:GetChildren()) do
+	for i, v in pairs(folder:GetChildren()) do
 		if v:IsA'Frame' then
 			if tostring(v.title.Text) == tostring(a) and tostring(v.text.Text) == tostring(b) then
 				run = false
@@ -128,12 +128,11 @@ local library:Notify = function(a, b, duration)
 	if run == true then
 		local finished = false
 		local n = template:Clone()
-		n.Parent = notifications
+		n.Parent = folder
 		n.title.Text = a
 		n.text.Text = b
 		notifcount += 1
 		n.Name = notifcount
-		n.Visible = true
 
 		if n:WaitForChild'duration'.Value == 0 then
 			n:WaitForChild'duration'.Value = duration
@@ -203,7 +202,7 @@ end
 spawn(function()
 	while true do
 		wait()
-		for i, v in pairs(notifications:GetChildren()) do
+		for i, v in pairs(folder:GetChildren()) do
 			if v:IsA'Frame' and v.AbsolutePosition.Y < 190 then
 				if not table.find(notifs, v.Name) then
 					table.insert(notifs, v.Name)
@@ -235,3 +234,5 @@ spawn(function()
 		end
 	end
 end)
+
+return funcs
