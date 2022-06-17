@@ -235,5 +235,3 @@ spawn(function()
 		end
 	end
 end)
-
-return library
