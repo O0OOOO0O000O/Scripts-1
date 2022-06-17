@@ -85,7 +85,9 @@ amount.TextTransparency = 1.000
 amount.TextWrapped = true
 
 
-local template = script:WaitForChild('Template')
+
+
+local template = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Template
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
