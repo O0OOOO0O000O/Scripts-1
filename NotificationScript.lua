@@ -133,6 +133,7 @@ function funcs.Notify(a, b, duration)
 		n.text.Text = b
 		notifcount += 1
 		n.Name = notifcount
+		n.Visible = true
 
 		if n:WaitForChild'duration'.Value == 0 then
 			n:WaitForChild'duration'.Value = duration
