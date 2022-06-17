@@ -92,13 +92,13 @@ if not game:IsLoaded() then
 end
 
 local notifs = {}
-local library = {}
 
 local notifications = game.Players.LocalPlayer.PlayerGui.NotificationsUI:WaitForChild'Notifications'
 
 local notifcount = 0
 
-function library.Notify(a, b, duration)
+return {
+local Notify = function(a, b, duration)
 	local run = true
 	local broke = false
 
@@ -236,4 +236,4 @@ spawn(function()
 	end
 end)
 
-return library
+}
