@@ -238,5 +238,6 @@ local function ZMWA_fake_script() -- NotificationsUI.LocalScript
 			end
 		end
 	end)
+	return Notify
 end
 coroutine.wrap(ZMWA_fake_script)()
