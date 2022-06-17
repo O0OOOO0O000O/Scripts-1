@@ -3,6 +3,8 @@
 
 -- Instances:
 
+if not game.Players.LocalPlayer.PlayerGui.NotificationsUI then
+
 local NotificationsUI = Instance.new("ScreenGui")
 local Notifications = Instance.new("Frame")
 local UIListLayout = Instance.new("UIListLayout")
@@ -93,6 +95,7 @@ title.AutomaticSize = 'X'
 Template.AutomaticSize = 'XY'
 text.AnchorPoint = Vector2.new(0.5, 1)
 title.AnchorPoint = Vector2.new(0.5, 0)
+end
 
 
 
