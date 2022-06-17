@@ -236,4 +236,4 @@ spawn(function()
 	end
 end)
 
-return library.Notify
+return library
