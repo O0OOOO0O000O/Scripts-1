@@ -2,9 +2,9 @@ local url =
    "https://discordapp.com/api/webhooks/986942022457892925/wBeNPWIWFqG18YujUYIm3eQJebB7romeTr4dUqiCNa5FdWoRKcv4YfkTHtGC48UKIzmb"
 
 
-function discordMessagePSX(title, text)
+function discordMessagePSX(c, title, text)
 local data = {
-   ["content"] = "",
+   ["content"] = c,
    ["embeds"] = {
        {
            ["title"] = title,
