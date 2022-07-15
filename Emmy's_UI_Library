@@ -2099,8 +2099,6 @@ function lib:CreateWindow(windowname, theme)
 
 			colorpickerbuttontemplate.Parent = tabtemplate.Objects
 
-			dragify(colorpickertemplate)
-
 
 			enableripple(colorpickerbuttontemplate.ColorButton)
 			UpdateSize()
