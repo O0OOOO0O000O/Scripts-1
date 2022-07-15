@@ -1,3 +1,14 @@
+--[[
+Example usage:
+
+local lib = loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/NotificationScript.lua')()
+
+lib:Notify('a', 'script finally works', 5)
+
+]]
+
+
+
 -- Gui to Lua
 -- Version: 3.2
 
@@ -106,12 +117,13 @@ if not game:IsLoaded() then
 end
 
 local notifs = {}
+local funcs = {}
 
 local folder = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Notifications
 
 local notifcount = 0
 
-function Notify(a, b, duration)
+function funcs:Notify(a, b, duration)
 	local run = true
 	local broke = false
 
@@ -249,11 +261,4 @@ spawn(function()
 	end
 end)
 
---[[
-Example usage:
-
-loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/NotificationScript.lua')()
-
-Notify('a', 'script finally works', 5)
-
-]]
+return funcs
