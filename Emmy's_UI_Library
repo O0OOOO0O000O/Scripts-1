@@ -148,7 +148,7 @@ function lib:CreateWindow(windowname, theme)
 			end
 
 			if win ~= nil then
-				if v.Name == 'Apply' and v.Parent:FindFirstChild'Preview' or v.Name == 'Cancel' and v.Parent:FindFirstChild'Preview' then
+				if v.Name == 'Apply' and v.Parent.Parent:FindFirstChild'Preview' or v.Name == 'Cancel' and v.Parent.Parent:FindFirstChild'Preview' then
 					v.BackgroundColor3 = theme.ElementColor
 				end
 				if v.Name == 'Background' and v:FindFirstChild'Background' and v.Parent:FindFirstChild'Preview' then
@@ -779,12 +779,12 @@ function lib:CreateWindow(windowname, theme)
 
 			--Properties:
 
-			textlabeltemplate.Name = text
+			textlabeltemplate.Name = tostring(text)
 			textlabeltemplate.BackgroundColor3 = theme.ElementColor
 			textlabeltemplate.Position = UDim2.new(0.149748906, 0, 0.11745514, 0)
 			textlabeltemplate.Size = UDim2.new(0, 264, 0, 30)
 			textlabeltemplate.Font = Enum.Font.Ubuntu
-			textlabeltemplate.Text = "Text"
+			textlabeltemplate.Text = tostring(text)
 			textlabeltemplate.TextColor3 = theme.TextColor
 			textlabeltemplate.TextSize = 20.000
 			textlabeltemplate.TextWrapped = true
@@ -2004,16 +2004,20 @@ function lib:CreateWindow(windowname, theme)
 			Marker_2.ZIndex = 5
 
 			Apply.Name = "Apply"
-			Apply.Parent = colorpickertemplate
-			Apply.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			Apply.Position = UDim2.new(0.60096699, 0, 0.475661099, 0)
-			Apply.Size = UDim2.new(0, 77, 0, 21)
+			Apply.Parent = colorpickertemplate:FindFirstChild('Background')
+			Apply.BackgroundColor3 = theme.ElementColor
+			Apply.Position = UDim2.new(0.71, 0, 0.723, 0)
+			Apply.Size = UDim2.new(0.272978514, 0, 0.0978444442, 0)
 			Apply.ZIndex = 5
 			Apply.Font = Enum.Font.Ubuntu
 			Apply.Text = "Apply"
 			Apply.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Apply.TextSize = 20.000
+			Apply.TextScaled = true
 			Apply.TextWrapped = true
+			Apply.AutoButtonColor = false
+			
+			enableripple(Apply)
 
 			UICorner.CornerRadius = UDim.new(0, 5)
 			UICorner.Parent = Apply
@@ -2022,17 +2026,21 @@ function lib:CreateWindow(windowname, theme)
 			UIAspectRatioConstraint.AspectRatio = 3.667
 
 			Cancel.Name = "Cancel"
-			Cancel.Parent = colorpickertemplate
-			Cancel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-			Cancel.Position = UDim2.new(0.60096699, 0, 0.555898845, 0)
-			Cancel.Size = UDim2.new(0, 77, 0, 21)
+			Cancel.Parent = colorpickertemplate:FindFirstChild('Background')
+			Cancel.BackgroundColor3 = theme.ElementColor
+			Cancel.Position = UDim2.new(0.707, 0, 0.834, 0)
+			Cancel.Size = UDim2.new(0.272978514, 0, 0.0978444442, 0)
 			Cancel.ZIndex = 5
 			Cancel.Font = Enum.Font.Ubuntu
 			Cancel.Text = "Cancel"
 			Cancel.TextColor3 = Color3.fromRGB(255, 255, 255)
 			Cancel.TextSize = 20.000
+			Cancel.TextScaled = true
 			Cancel.TextWrapped = true
-
+			Cancel.AutoButtonColor = false
+			
+			enableripple(Cancel)
+			
 			UICorner_2.CornerRadius = UDim.new(0, 5)
 			UICorner_2.Parent = Cancel
 
@@ -2143,12 +2151,12 @@ function lib:CreateWindow(windowname, theme)
 			colorpickerbuttontemplate.ColorButton.MouseButton1Click:Connect(function()
 				colorpickertemplate.Visible = true
 			end)			
-			colorpickertemplate:WaitForChild('Apply').MouseButton1Click:Connect(function()
+			colorpickertemplate:WaitForChild('Background'):WaitForChild('Apply').MouseButton1Click:Connect(function()
 				funv(colorpickertemplate:WaitForChild('Preview').BackgroundColor3)
 				colorpickerbuttontemplate.ColorButton.BackgroundColor3 = colorpickertemplate:WaitForChild('Preview').BackgroundColor3
 				colorpickertemplate.Visible = false
 			end)			
-			colorpickertemplate:WaitForChild('Cancel').MouseButton1Click:Connect(function()
+			colorpickertemplate:WaitForChild('Background'):WaitForChild('Cancel').MouseButton1Click:Connect(function()
 				colorpickertemplate.Visible = false
 			end)
 
