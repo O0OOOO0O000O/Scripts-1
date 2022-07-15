@@ -110,7 +110,7 @@ end
 
 
 
-local template = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Template
+local template = game:GetService'Players'.LocalPlayer:WaitForChild'PlayerGui'::WaitForChild'NotificationsUI':WaitForChild'Template'
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
@@ -119,7 +119,7 @@ end
 local notifs = {}
 local funcs = {}
 
-local folder = game.Players.LocalPlayer.PlayerGui.NotificationsUI.Notifications
+local folder = game.Players.LocalPlayer:WaitForChild'PlayerGui':WaitForChild'NotificationsUI':WaitForChild'Notifications'
 
 local notifcount = 0
 
