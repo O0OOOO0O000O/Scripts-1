@@ -384,6 +384,9 @@ function lib:CreateWindow(windowname, theme)
 	windowtemplate.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 	windowtemplate.Background:WaitForChild('CloseButton').MouseButton1Click:Connect(function()
+		if table.find(allwindows, windowname) then
+			table.remove(allwindows, table.find(allwindows, windowname))
+		end
 		destroyed = true
 		windowtemplate:Destroy()
 	end)
@@ -486,6 +489,13 @@ function lib:CreateWindow(windowname, theme)
 		else
 			menutemplate = windowtemplate.Background.Menu
 		end
+		
+		local function UpdateSize3()
+			local cS = menutemplate.UIListLayout.AbsoluteContentSize
+			game.TweenService:Create(menutemplate, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
+				CanvasSize = UDim2.new(0,cS.X,0,cS.Y)
+			}):Play()
+		end
 
 		local function menuenableripple(v)
 			v.MouseButton1Click:Connect(function()
@@ -532,12 +542,14 @@ function lib:CreateWindow(windowname, theme)
 
 
 		local function UpdateSize()
+			pcall(function()
 			if destroyed == false then
 				local cS = tabtemplate.Objects.UIListLayout.AbsoluteContentSize
 				game.TweenService:Create(tabtemplate.Objects, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
 					CanvasSize = UDim2.new(0,cS.X,0,cS.Y)
 				}):Play()
-			end
+				end
+				end)
 		end
 
 		tabtemplate.Objects.ChildAdded:Connect(UpdateSize)
@@ -568,6 +580,8 @@ function lib:CreateWindow(windowname, theme)
 		UICorner.Parent = tabmenutemplate
 
 		tabmenutemplate.Parent = menutemplate
+		
+		UpdateSize3()
 
 		if first == nil then
 			first = tabname
@@ -581,9 +595,12 @@ function lib:CreateWindow(windowname, theme)
 				end
 			end
 		end
+		
+		local changing = nil
 
 
 		tabmenutemplate.MouseButton1Click:Connect(function()
+			changing = tabmenutemplate.Name
 			if menudb == false then
 				menudb = true
 				local p = tabmenutemplate
@@ -611,6 +628,7 @@ function lib:CreateWindow(windowname, theme)
 				end
 				wait(.35)
 				menudb = false
+				changing = nil
 			end
 		end)
 
@@ -629,6 +647,18 @@ function lib:CreateWindow(windowname, theme)
 			tabtemplate.Name = tostring(text)
 			tabmenutemplate.Name = tostring(text)
 			tabmenutemplate.Text = tostring(text)
+		end
+		
+		function tabs:Remove()
+			if table.find(alltabs, tabname) then
+				table.remove(alltabs, table.find(alltabs, tabname))
+			end
+			if first == tabtemplate.Name and #alltabs > 0 then
+				first = alltabs[1]
+			end
+			tabmenutemplate:Destroy()
+			tabtemplate:Destroy()
+			UpdateSize3()
 		end
 
 		function tabs:AddTextLabel(text)
