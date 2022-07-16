@@ -20,63 +20,63 @@ local themes = {
 		ElementColor = Color3.fromRGB(30, 30, 30),
 		WindowColor = Color3.fromRGB(70, 70, 70),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(255, 16, 16)
+		ImageColor = Color3.fromRGB(203, 203, 203)
 	},
 	LightTheme = {
 		TabColor = Color3.fromRGB(250, 250, 250),
 		ElementColor = Color3.fromRGB(215, 215, 215),
 		WindowColor = Color3.fromRGB(190, 190, 190),
 		TextColor = Color3.fromRGB(0, 0, 0),
-		CloseButtonColor = Color3.fromRGB(255, 16, 16)
+		ImageColor = Color3.fromRGB(72, 72, 72)
 	},
 	BlueTheme = {
 		TabColor = Color3.fromRGB(19, 86, 125),
 		ElementColor = Color3.fromRGB(0, 150, 225),
 		WindowColor = Color3.fromRGB(24, 115, 167),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(0, 150, 225)
+		ImageColor = Color3.fromRGB(129, 207, 255)
 	},
 	PurpleTheme = {
 		TabColor = Color3.fromRGB(90, 52, 112),
 		ElementColor = Color3.fromRGB(184, 113, 225),
 		WindowColor = Color3.fromRGB(131, 73, 167),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(184, 113, 225)
+		ImageColor = Color3.fromRGB(255, 129, 255)
 	},
 	PinkTheme = {
 		TabColor = Color3.fromRGB(108, 51, 112),
 		ElementColor = Color3.fromRGB(225, 109, 220),
 		WindowColor = Color3.fromRGB(164, 71, 167),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(225, 109, 220)
+		ImageColor = Color3.fromRGB(255, 153, 255)
 	},
 	RedTheme = {
 		TabColor = Color3.fromRGB(40, 40, 40),
 		ElementColor = Color3.fromRGB(225, 62, 62),
 		WindowColor = Color3.fromRGB(30, 30, 30),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(225, 62, 62)
+		ImageColor = Color3.fromRGB(255, 114, 114)
 	},
 	GreenTheme = {
 		TabColor = Color3.fromRGB(40, 40, 40),
 		ElementColor = Color3.fromRGB(54, 212, 107),
 		WindowColor = Color3.fromRGB(30, 30, 30),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(101, 255, 158)
+		ImageColor = Color3.fromRGB(159, 255, 157)
 	},
 	OrangeTheme = {
 		TabColor = Color3.fromRGB(40, 40, 40),
 		ElementColor = Color3.fromRGB(255, 152, 49),
 		WindowColor = Color3.fromRGB(30, 30, 30),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(255, 210, 46)
+		ImageColor = Color3.fromRGB(255, 210, 46)
 	},
 	TealTheme = {
 		TabColor = Color3.fromRGB(0, 158, 153),
 		ElementColor = Color3.fromRGB(0, 216, 162),
 		WindowColor = Color3.fromRGB(35, 189, 156),
 		TextColor = Color3.fromRGB(255, 255, 255),
-		CloseButtonColor = Color3.fromRGB(2, 255, 179)
+		ImageColor = Color3.fromRGB(133, 255, 219)
 	}
 }
 
@@ -84,17 +84,26 @@ local themes = {
 
 
 function lib:CreateWindow(windowname, theme)
+	
+	local windowtemplate = Instance.new("ScreenGui")
 
 	local destroyed = false
 	local first = nil
 	windowname = windowname or 'Window'
 	local window = {}
 	table.insert(lib, windowname)
+	
+	if table.find(allwindows, windowname) then
+		print('Please choose a different name for your window!')
+		return
+	end
+
+	table.insert(allwindows, windowname)
 
 	local function totheme(text)
 		if type(text) == 'table' then
 			local t = text
-			if t.TabColor and t.ElementColor and t.WindowColor and t.TextColor and t.CloseButtonColor then
+			if t.TabColor and t.ElementColor and t.WindowColor and t.TextColor and t.ImageColor then
 				return t
 			end
 		else
@@ -130,14 +139,12 @@ function lib:CreateWindow(windowname, theme)
 	function window:SetTheme(newTheme)
 
 		theme = totheme(newTheme)
+		
+		local win = nil
 
-		for i, v in pairs(pg:GetDescendants()) do
+		win = windowtemplate
 
-			local win = nil
-
-			if table.find(allwindows, windowname) then
-				win = pg[windowname]
-			end
+		for i, v in pairs(win:GetDescendants()) do
 
 			local background = nil
 
@@ -171,7 +178,7 @@ function lib:CreateWindow(windowname, theme)
 			end
 
 			if background ~= nil then
-				background:FindFirstChild'CloseButton'.BackgroundColor3 = theme.CloseButtonColor
+				background:FindFirstChild'CloseButton'.BackgroundColor3 = theme.ImageColor
 				background:FindFirstChild'InfoFrame':FindFirstChild'UINotification'.BackgroundColor3 = theme.ElementColor
 				for a, b in pairs(background:GetDescendants()) do
 					if table.find(alltabs, v.Name) then
@@ -191,13 +198,13 @@ function lib:CreateWindow(windowname, theme)
 								b.BackgroundColor3 = theme.TabColor
 							end
 							if b.Name == 'sliderDrag' then
-								b.BackgroundColor3 = theme.WindowColor
+								b.BackgroundColor3 = theme.ImageColor
 							end
 							if b.Name == 'Background' and v:IsA'ImageLabel' then
 								b.ImageColor3 = theme.TabColor
 							end
 							if b:IsA'ImageButton' then
-								b.ImageColor3 = theme.TextColor
+								b.ImageColor3 = theme.ImageColor
 							end
 							if b:IsA'TextBox' then
 								b.BackgroundColor3 = theme.WindowColor
@@ -223,7 +230,7 @@ function lib:CreateWindow(windowname, theme)
 							b.ScrollBarImageColor3 = theme.TextColor
 						end
 						if b.Name == 'Toggle' and b:IsA'ImageLabel' then
-							b.ImageColor3 = theme.TextColor
+							b.ImageColor3 = theme.ImageColor
 						end
 					end
 				end
@@ -273,17 +280,9 @@ function lib:CreateWindow(windowname, theme)
 		end)
 	end
 
-	if table.find(allwindows, windowname) then
-		print('Please choose a different name for your window!')
-		return
-	end
-
-	table.insert(allwindows, windowname)
-
 
 	-- Instances:
 
-	local windowtemplate = Instance.new("ScreenGui")
 	local Background = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
@@ -332,7 +331,7 @@ function lib:CreateWindow(windowname, theme)
 
 	CloseButton.Name = "CloseButton"
 	CloseButton.Parent = Background
-	CloseButton.BackgroundColor3 = theme.CloseButtonColor
+	CloseButton.BackgroundColor3 = theme.ImageColor
 	CloseButton.Position = UDim2.new(0.938950539, 0, 0.0219999999, 0)
 	CloseButton.Size = UDim2.new(0, 18, 0, 18)
 	CloseButton.AutoButtonColor = false
@@ -757,17 +756,16 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			ImageButton.Parent = Dropdown
 			ImageButton.AnchorPoint = Vector2.new(1, 0.5)
-			ImageButton.BackgroundColor3 = theme.TextColor
+			ImageButton.BackgroundColor3 = theme.ImageColor
 			ImageButton.BackgroundTransparency = 1.000
 			ImageButton.Position = UDim2.new(0.909090936, 0, 0.5, 0)
-			ImageButton.Rotation = 180.000
 			ImageButton.Size = UDim2.new(0, 28, 0, 28)
-			ImageButton.Image = "http://www.roblox.com/asset/?id=9805044713"
-			ImageButton.ImageColor3 = theme.TextColor
+			ImageButton.Image = "http://www.roblox.com/asset/?id=10244276681"
+			ImageButton.ImageColor3 = theme.ImageColor
 
 			dropdowntemplate.Parent = tabtemplate.Objects
 
@@ -848,7 +846,7 @@ function lib:CreateWindow(windowname, theme)
 							Size = UDim2.new(0, 264, 0, 30)
 						}):Play()
 						game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-							Rotation = 180
+							Rotation = 0
 						}):Play()
 						wait(.15)
 						UpdateSize2()
@@ -865,7 +863,7 @@ function lib:CreateWindow(windowname, theme)
 							Size = UDim2.new(0, 264, 0, size2)
 						}):Play()
 						game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-							Rotation = 0
+							Rotation = 180
 						}):Play()
 						UpdateSize2()
 						UpdateSize()
@@ -884,7 +882,7 @@ function lib:CreateWindow(windowname, theme)
 							Size = UDim2.new(0, 264, 0, 30)
 						}):Play()
 						game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-							Rotation = 180
+							Rotation = 0
 						}):Play()
 						wait(.15)
 						UpdateSize2()
@@ -968,7 +966,7 @@ function lib:CreateWindow(windowname, theme)
 						Size = UDim2.new(0, 264, 0, 30)
 					}):Play()
 					game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-						Rotation = 180
+						Rotation = 0
 					}):Play()
 					wait(.15)
 					UpdateSize2()
@@ -1012,7 +1010,7 @@ function lib:CreateWindow(windowname, theme)
 					Size = UDim2.new(0, 264, 0, 30)
 				}):Play()
 				game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-					Rotation = 180
+					Rotation = 0
 				}):Play()
 				wait(.15)
 				UpdateSize2()
@@ -1085,7 +1083,7 @@ function lib:CreateWindow(windowname, theme)
 							}):Play()
 
 							game.TweenService:Create(dropdowntemplate.Dropdown.ImageButton, TweenInfo.new(0.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
-								Rotation = 180
+								Rotation = 0
 							}):Play()
 							wait(.15)
 							UpdateSize2()
@@ -1136,7 +1134,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			textbuttontemplate.Parent = tabtemplate.Objects
 
@@ -1243,7 +1241,7 @@ function lib:CreateWindow(windowname, theme)
 
 			sliderDrag.Name = "sliderDrag"
 			sliderDrag.Parent = sliderBtn
-			sliderDrag.BackgroundColor3 = theme.WindowColor
+			sliderDrag.BackgroundColor3 = theme.ImageColor
 			sliderDrag.BorderColor3 = Color3.fromRGB(74, 99, 135)
 			sliderDrag.BorderSizePixel = 0
 			sliderDrag.Size = UDim2.new(0, 30, 0, 7)
@@ -1291,7 +1289,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			slidertemplate.Parent = tabtemplate.Objects
 
@@ -1449,7 +1447,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			UICorner.CornerRadius = UDim.new(0, 6)
 			UICorner.Parent = textboxtemplate
@@ -1582,7 +1580,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			UICorner.CornerRadius = UDim.new(0, 6)
 			UICorner.Parent = toggletemplate
@@ -1609,7 +1607,7 @@ function lib:CreateWindow(windowname, theme)
 			Toggle.Position = UDim2.new(0.8075068, 0, -0.0151515156, 0)
 			Toggle.Size = UDim2.new(0, 30, 0, 30)
 			Toggle.Image = "http://www.roblox.com/asset/?id=10221080526"
-			Toggle.ImageColor3 = theme.TextColor
+			Toggle.ImageColor3 = theme.ImageColor
 
 			Square.Name = "Square"
 			Square.Parent = toggletemplate
@@ -1621,7 +1619,7 @@ function lib:CreateWindow(windowname, theme)
 			Square.Size = UDim2.new(0, 30, 0, 30)
 			Square.AutoButtonColor = false
 			Square.Image = "http://www.roblox.com/asset/?id=10221047499"
-			Square.ImageColor3 = theme.TextColor
+			Square.ImageColor3 = theme.ImageColor
 
 			toggletemplate.Parent = tabtemplate.Objects
 
@@ -1740,7 +1738,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			UICorner.CornerRadius = UDim.new(0, 6)
 			UICorner.Parent = keybindtemplate
@@ -2103,7 +2101,7 @@ function lib:CreateWindow(windowname, theme)
 			ViewInfo.Position = UDim2.new(1, 0, 0.5, 0)
 			ViewInfo.Size = UDim2.new(0, 28, 0, 28)
 			ViewInfo.Image = "http://www.roblox.com/asset/?id=10215364479"
-			ViewInfo.ImageColor3 = theme.TextColor
+			ViewInfo.ImageColor3 = theme.ImageColor
 
 			colorpickerbuttontemplate.Parent = tabtemplate.Objects
 
