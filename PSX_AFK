@@ -47,6 +47,7 @@ task.wait(.3)
 local temp = 0
 
 for i, v in pairs(lp.PlayerGui:GetDescendants()) do
+task.wait()
 print't'
 if v:IsA'TextLabel' then
 if string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
@@ -61,13 +62,6 @@ end
 
 end
 end
-end
-
-if temp > old then
-old = temp
-end
-if old > temp then
-old = temp
 end
 
 old = temp
