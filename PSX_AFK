@@ -16,11 +16,11 @@ local args = {[1] = {[1] = "Titanum Egg", [2] = true}}
 local args2 = {[1] = {[1] = "Golden Titanum Egg", [2] = true}}
 
 while true do
-task.wait(.13)
+task.wait(.54)
 pcall(function()
 workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args))
 
-task.wait(.13)
+task.wait(.54)
 
 workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args2))
 
@@ -43,7 +43,7 @@ local text2 = ' '
 
 local f = coroutine.wrap(function()
 while true do
-task.wait()
+task.wait(.3)
 local temp = 0
 
 for i, v in pairs(lp.PlayerGui:GetDescendants()) do
