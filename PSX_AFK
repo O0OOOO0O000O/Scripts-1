@@ -47,13 +47,16 @@ task.wait()
 local temp = 0
 
 for i, v in pairs(lp.PlayerGui:GetDescendants()) do
-
+print't'
 if v:IsA'TextLabel' then
 if string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
+print'ok yea'
 
 if temp > old then
 temp = temp+1
+print'b'
 discordMsgPSX("<@&987797253869686804>", "Someone hatched an exclusive or a huge pet!", '_'..v.Text..'_')
+print'c'
 end
 
 end
