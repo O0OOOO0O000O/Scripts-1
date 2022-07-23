@@ -78,7 +78,7 @@ end
 end)
 
 
-local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay") Dir.DescendantAdded:Connect(function(Err) if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function() if Err.Text:sub(0, 12) == "Disconnected" then if #game.Players:GetPlayers() <= 1 then lp:Kick("\nRejoining...") wait() TeleportService:Teleport(game.PlaceId, lp) else TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp) end end end) end end)
+local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay") Dir.DescendantAdded:Connect(function(Err) if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function() if Err.Text:sub(0, 12) == "Disconnected" then for i = 1, 1000 do task.wait(.2) if #game.Players:GetPlayers() <= 1 then lp:Kick("\nRejoining...") wait() TeleportService:Teleport(game.PlaceId, lp) else TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp) end end end end) end end)
 
 
 
