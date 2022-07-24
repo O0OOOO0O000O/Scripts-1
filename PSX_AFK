@@ -92,7 +92,7 @@ end
 
 if temp > old then
 print'b'
-discordMsgPSX("<@&987797253869686804>", "Someone hatched an exclusive or a huge pet!", '_'..txt..'_')
+discordMessagePSX("<@&987797253869686804>", "Someone hatched an exclusive or a huge pet!", '_'..txt..'_')
 print'c'
 end
 
@@ -115,11 +115,15 @@ local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promp
 Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
+discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
 for i = 1, 1000 do
 task.wait(.5)
 if #game.Players:GetPlayers() <= 1 then
 lp:Kick("\nRejoining...")
-wait() TeleportService:Teleport(game.PlaceId, lp) else TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
+wait()
+TeleportService:Teleport(game.PlaceId, lp)
+else
+TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
 end
 end
 end
