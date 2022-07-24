@@ -127,7 +127,7 @@ if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(fu
 if Err.Text:sub(0, 12) == "Disconnected" then
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
 for i = 1, 1000 do
-task.wait(.5)
+task.wait(10)
 if #game.Players:GetPlayers() <= 1 then
 lp:Kick("\nRejoining...")
 wait()
