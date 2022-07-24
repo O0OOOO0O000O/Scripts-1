@@ -2,8 +2,8 @@ local lp = game.Players.LocalPlayer
 local run = true
 
 local Settings = {
-Egg1 = "Titanum Egg",
-Egg2 = "Golden Titanum Egg",
+Egg1 = "Titanium Egg",
+Egg2 = "Golden Titanium Egg",
 NoEggOpeningAnimation = true
 }
 
