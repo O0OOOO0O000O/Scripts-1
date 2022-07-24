@@ -44,8 +44,20 @@ end
 
 local v = coroutine.wrap(function()
 
-local args = {[1] = {[1] = Settings.Egg1, [2] = hasTripleHatch}}
-local args2 = {[1] = {[1] = Settings.Egg2, [2] = hasTripleHatch}}
+local args = {
+[1] = {
+[1] = Settings.Egg1,
+[2] = hasTripleHatch
+}
+}
+
+
+local args = {
+[1] = {
+[1] = Settings.Egg2,
+[2] = hasTripleHatch
+}
+}
 
 while true do
 task.wait(.54)
@@ -81,12 +93,10 @@ local txt = ''
 for i, v in pairs(lp.PlayerGui:GetDescendants()) do
 task.wait()
 print't'
-if v:IsA'TextLabel' then
-if string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
+if v:IsA'TextLabel' and string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
 print'ok yea'
 temp = temp+1
 txt = v.Text
-end
 end
 end
 
