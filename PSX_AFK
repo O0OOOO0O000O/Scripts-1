@@ -69,8 +69,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Scripts/main/W
 discordMessagePSX("<@&987797253869686804>", "Script executed!", lp.DisplayName.." has executed the script.")
 
 local old = 0
-local text = ' '
-local text2 = ' '
+local text = ';'
+local text2 = ';'
 
 local f = coroutine.wrap(function()
 while true do
