@@ -131,9 +131,9 @@ task.wait(.5)
 if #game.Players:GetPlayers() <= 1 then
 lp:Kick("\nRejoining...")
 wait()
-TeleportService:Teleport(game.PlaceId, lp)
+game.TeleportService:Teleport(game.PlaceId, lp)
 else
-TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
+game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
 end
 end
 end
