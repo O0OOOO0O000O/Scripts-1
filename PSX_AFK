@@ -1,19 +1,51 @@
 local lp = game.Players.LocalPlayer
+local run = true
+
+local Settings = {
+Egg1 = "Titanum Egg",
+Egg2 = "Golden Titanum Egg",
+NoEggOpeningAnimation = true
+}
+
+local hasTripleHatch = game:GetService'MarketplaceService':UserOwnsGamePassAsync(lp.UserId, 18674307)
+
+pcall(function()
+if getgenv().AFK_LOADED == true then
+run = false
+else
+getgenv().AFK_LOADED = true
+end
+end)
 
 
+if run == true then
+
+local e = coroutine.wrap(function()
+while true do
+task.wait(30) game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end
+end)
+
+e()
+
+
+
+if Settings.NoEggOpeningAnimation == true then
 
 for i,v in pairs(getgc(true)) do
-   if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
-       v.OpenEgg = function()
-           return
-       end
-   end
+if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
+v.OpenEgg = function()
+return
+end
+end
+end
+
 end
 
 local v = coroutine.wrap(function()
 
-local args = {[1] = {[1] = "Titanum Egg", [2] = true}}
-local args2 = {[1] = {[1] = "Golden Titanum Egg", [2] = true}}
+local args = {[1] = {[1] = Settings.Egg1, [2] = hasTripleHatch}}
+local args2 = {[1] = {[1] = Settings.Egg2, [2] = hasTripleHatch}}
 
 while true do
 task.wait(.54)
@@ -45,6 +77,7 @@ local f = coroutine.wrap(function()
 while true do
 task.wait(.3)
 local temp = 0
+local txt = ''
 
 for i, v in pairs(lp.PlayerGui:GetDescendants()) do
 task.wait()
@@ -52,16 +85,16 @@ print't'
 if v:IsA'TextLabel' then
 if string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
 print'ok yea'
+temp = temp+1
+txt = v.Text
+end
+end
+end
 
 if temp > old then
-temp = temp+1
 print'b'
-discordMsgPSX("<@&987797253869686804>", "Someone hatched an exclusive or a huge pet!", '_'..v.Text..'_')
+discordMsgPSX("<@&987797253869686804>", "Someone hatched an exclusive or a huge pet!", '_'..txt..'_')
 print'c'
-end
-
-end
-end
 end
 
 old = temp
@@ -78,11 +111,34 @@ end
 end)
 
 
-local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay") Dir.DescendantAdded:Connect(function(Err) if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function() if Err.Text:sub(0, 12) == "Disconnected" then for i = 1, 1000 do task.wait(.2) if #game.Players:GetPlayers() <= 1 then lp:Kick("\nRejoining...") wait() TeleportService:Teleport(game.PlaceId, lp) else TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp) end end end end) end end)
+local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
+
+Dir.DescendantAdded:Connect(function(Err)
+if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
+if Err.Text:sub(0, 12) == "Disconnected" then
+for i = 1, 1000 do
+task.wait(.5)
+if #game.Players:GetPlayers() <= 1 then
+lp:Kick("\nRejoining...")
+wait() TeleportService:Teleport(game.PlaceId, lp) else TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
+end
+end
+end
+end)
+end
+end)
 
 
 
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 
-game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State) if State == Enum.TeleportState.Started then queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/PSX_AFK.lua')()") end end) 
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+if State == Enum.TeleportState.Started then
+queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/PSX_AFK.lua')()")
+end
+end)
 print'fully loaded'
+
+
+
+end
