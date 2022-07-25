@@ -61,7 +61,7 @@ local args = {
 }
 
 while true do
-task.wait(.1)
+task.wait(.13)
 pcall(function()
 local y = math.random(1, 2)
 if y == 1 then
