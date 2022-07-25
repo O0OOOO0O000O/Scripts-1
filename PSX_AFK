@@ -93,11 +93,13 @@ local txt = ''
 for i, v in pairs(lp.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLogDisplay.Scroller:GetDescendants()) do
 task.wait()
 print't'
+pcall(function()
 if v:IsA'TextLabel' and string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
 print'ok yea'
 temp = temp+1
 txt = v.Text
 end
+end)
 end
 
 if temp > old then
