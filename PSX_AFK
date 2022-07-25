@@ -65,7 +65,7 @@ local args = {
 while true do
 task.wait(.13)
 pcall(function()
-local y = math.random(1, 2)
+local y = math.random(0, 2)
 if y == 1 then
 workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args))
 else
