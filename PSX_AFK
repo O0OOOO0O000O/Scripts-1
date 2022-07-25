@@ -128,6 +128,7 @@ Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
+wait(5)
 if #game.Players:GetPlayers() <= 1 then
 wait()
 game.TeleportService:Teleport(game.PlaceId, lp)
