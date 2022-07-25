@@ -81,8 +81,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Scripts/main/W
 discordMessagePSX("<@&987797253869686804>", "Script executed!", lp.DisplayName.." has executed the script.")
 
 local old = 0
-local text = ';'
-local text2 = ';'
+local text = 'a EXCLUSIVE'
+local text2 = 'a EXCLUSIVE Huge'
 
 local f = coroutine.wrap(function()
 while true do
@@ -94,7 +94,7 @@ for i, v in pairs(lp.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLo
 task.wait()
 print't'
 pcall(function()
-if v:IsA'TextLabel' and string.find(v.Text:lower(), text:lower()) or string.find(v.Text:lower(), text2:lower()) then
+if v:IsA'TextLabel' and string.find(v.Text:lower(), text:lower()) and not v:FindFirstChild'TextButton' and string.split(v.Text, ' ')[1] == lp.DisplayName or string.find(v.Text:lower(), text2:lower()) and not v:FindFirstChild'TextButton' and string.split(v.Text, ' ')[1] == lp.DisplayName then
 print'ok yea'
 temp = temp+1
 txt = v.Text
@@ -128,15 +128,11 @@ Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
-for i = 1, 1000 do
-task.wait(10)
 if #game.Players:GetPlayers() <= 1 then
-lp:Kick("\nRejoining...")
 wait()
 game.TeleportService:Teleport(game.PlaceId, lp)
 else
 game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
-end
 end
 end
 end)
