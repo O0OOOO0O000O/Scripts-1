@@ -12,6 +12,7 @@ local hasTripleHatch = game:GetService'MarketplaceService':UserOwnsGamePassAsync
 pcall(function()
 if getgenv().AFK_LOADED == true then
 run = false
+print'The script is already loaded!'
 else
 getgenv().AFK_LOADED = true
 end
