@@ -30,10 +30,10 @@ end)
 e()
 
 
-
+local b = coroutine.wrap(function()
 if Settings.NoEggOpeningAnimation == true then
 for i = 1, 20 do
-task.wait(.2)
+task.wait(.75)
 for i,v in pairs(getgc(true)) do
 if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
 v.OpenEgg = function()
@@ -42,8 +42,10 @@ end
 end
 end
 end
-
 end
+end)
+
+b()
 
 local v = coroutine.wrap(function()
 
