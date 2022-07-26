@@ -1,6 +1,14 @@
 local lp = game.Players.LocalPlayer
 local run = true
 
+function gr(num)
+local index = math.random(1, num)
+if index == 1 then
+return true
+else
+return false
+end
+
 local Settings = {
 Egg1 = "Titanium Egg",
 Egg2 = "Golden Titanium Egg",
