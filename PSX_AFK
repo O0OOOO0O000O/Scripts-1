@@ -97,7 +97,7 @@ local text = 'a EXCLUSIVE'
 local text2 = 'a EXCLUSIVE Huge'
 
 local f = coroutine.wrap(function()
-lp.PlayerGui.Chat.Frame.ChatChannelParentFrame.Frame_MessageLogDisplay.Scroller.ChildAdded:Connect(function(h)
+lp.PlayerGui.DescendantAdded:Connect(function(h)
 pcall(function()
 if string.find(h.Text:lower(), text:lower()) and h.Text:split(' ')[1] == lp.DisplayName and not h:FindFirstChild'TextButton' or string.find(h.Text:lower(), text2:lower()) and h.Text:split(' ')[1] == lp.DisplayName and not h:FindFirstChild'TextButton' then
 
