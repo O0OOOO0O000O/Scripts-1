@@ -8,6 +8,7 @@ return true
 else
 return false
 end
+end
 
 local Settings = {
 Egg1 = "Titanium Egg",
@@ -75,7 +76,7 @@ local args = {
 while true do
 task.wait(.13)
 pcall(function()
-if math.random(2) == 1 then
+if gr(2) then
 workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args))
 else
 workspace.__THINGS.__REMOTES:FindFirstChild("buy egg"):InvokeServer(unpack(args2))
