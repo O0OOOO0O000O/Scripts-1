@@ -153,7 +153,6 @@ if State == Enum.TeleportState.Started and queueteleport then
 queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Emcept/Scripts/main/PSX_AFK.lua'))()")
 end
 end)
-print'fully loaded'
 
 
 
