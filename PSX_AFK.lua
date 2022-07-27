@@ -17,8 +17,8 @@ end
 end
 
 local Settings = {
-Egg1 = "Hell Egg",
-Egg2 = "Golden Hell Egg",
+Egg1 = "Cracked Egg",
+Egg2 = "Golden Cracked Egg",
 NoEggOpeningAnimation = true
 }
 
