@@ -1,5 +1,5 @@
 if not game:IsLoaded() then
-	game.Loaded:Wait()
+game.Loaded:Wait()
 end
 
 
@@ -119,44 +119,16 @@ f()
 
 game.Players.PlayerRemoving:Connect(function(plr)
 if plr == lp then
-discordMessagePSX("<@&987797253869686804>", game.Players.LocalPlayer.DisplayName.." has left the game.", "Either got kicked or crashed (or just left lmao).")
-end
-end)
-
-
-
-local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
-
-
-Dir.DescendantAdded:Connect(function(Err)
-
-if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
-
-if Err.Text:sub(0, 12) == "Disconnected" then
-
-task.wait(25)
-
-discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
+discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", "Rejoining... (if u didn't wanna leave)")
 
 for i = 1, 1000 do task.wait(5)
-
 if #game.Players:GetPlayers() <= 1 then
-
 wait()
-
 game.TeleportService:Teleport(game.PlaceId, lp)
-
 else
-
 game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
-
 end
-
 end
-
-end
-
-end)
 
 end
 end)
