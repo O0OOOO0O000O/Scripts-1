@@ -142,9 +142,9 @@ game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
 end
 end
 end
-								end
 end)
 end)
+end
 end)
 
 
