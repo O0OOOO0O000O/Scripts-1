@@ -129,16 +129,16 @@ local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promp
 Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
-wait(25)
-discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
 wait(5)
+discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
+wait(25)
 for i = 1, 1000 do
+wait(5)
 if #game.Players:GetPlayers() <= 1 then
 game.TeleportService:Teleport(game.PlaceId, lp)
 else
 game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
 end
-wait(5)
 end
 end
 end)
