@@ -129,7 +129,7 @@ local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promp
 Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
-wait(15)
+wait(25)
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
 wait(5)
 for i = 1, 1000 do
