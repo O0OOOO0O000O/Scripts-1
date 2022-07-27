@@ -48,7 +48,7 @@ e()
 local b = coroutine.wrap(function()
 if Settings.NoEggOpeningAnimation == true then
 for i = 1, 200000 do
-task.wait(.2)
+task.wait(1)
 for i,v in pairs(getgc(true)) do
 if (typeof(v) == 'table' and rawget(v, 'OpenEgg')) then
 v.OpenEgg = function()
