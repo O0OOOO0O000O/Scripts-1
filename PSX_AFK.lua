@@ -17,8 +17,8 @@ end
 end
 
 local Settings = {
-Egg1 = "Titanium Egg",
-Egg2 = "Golden Titanium Egg",
+Egg1 = "Hell Egg",
+Egg2 = "Golden Hell Egg",
 NoEggOpeningAnimation = true
 }
 
