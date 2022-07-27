@@ -124,26 +124,40 @@ end
 end)
 
 
+
 local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promptOverlay")
 
+
 Dir.DescendantAdded:Connect(function(Err)
+
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
-pcall(function()
+
 if Err.Text:sub(0, 12) == "Disconnected" then
+
 task.wait(25)
+
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
-for i = 1, 1000 do
-task.wait(5)
+
+for i = 1, 1000 do task.wait(5)
+
 if #game.Players:GetPlayers() <= 1 then
+
 wait()
+
 game.TeleportService:Teleport(game.PlaceId, lp)
+
 else
+
 game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
+
 end
+
 end
+
 end
+
 end)
-end)
+
 end
 end)
 
