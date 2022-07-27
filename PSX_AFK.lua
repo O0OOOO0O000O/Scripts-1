@@ -128,6 +128,7 @@ local Dir = game.CoreGui:FindFirstChild("RobloxPromptGui"):FindFirstChild("promp
 
 Dir.DescendantAdded:Connect(function(Err)
 if Err.Name == "ErrorTitle" then Err:GetPropertyChangedSignal("Text"):Connect(function()
+pcall(function()
 if Err.Text:sub(0, 12) == "Disconnected" then
 task.wait(25)
 discordMessagePSX("<@&987797253869686804>", lp.DisplayName.." has left the game.", 'Rejoining...')
@@ -141,8 +142,9 @@ game.TeleportService:TeleportToPlaceInstance(game.PlaceId, game.JobId, lp)
 end
 end
 end
+								end
 end)
-end
+end)
 end)
 
 
