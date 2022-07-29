@@ -3,6 +3,7 @@
 
 -- Instances:
 
+pcall(function()
 if not game.Players.LocalPlayer.PlayerGui:FindFirstChild'NotificationsUI' then
 
 local NotificationsUI = Instance.new("ScreenGui")
@@ -96,6 +97,7 @@ Template.AutomaticSize = 'XY'
 text.AnchorPoint = Vector2.new(0.5, 1)
 title.AnchorPoint = Vector2.new(0.5, 0)
 end
+end)
 
 
 
