@@ -3,7 +3,7 @@
 
 -- Instances:
 
-if not game.Players.LocalPlayer.PlayerGui.NotificationsUI then
+if not game.Players.LocalPlayer.PlayerGui:FindFirstChild'NotificationsUI' then
 
 local NotificationsUI = Instance.new("ScreenGui")
 local Notifications = Instance.new("Frame")
