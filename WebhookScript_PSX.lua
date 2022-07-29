@@ -1,5 +1,5 @@
 local url =
-   "https://discordapp.com/api/webhooks/986942022457892925/wBeNPWIWFqG18YujUYIm3eQJebB7romeTr4dUqiCNa5FdWoRKcv4YfkTHtGC48UKIzmb"
+   "https://discord.com/api/webhooks/1002518660843311114/Z9lT8cxcrs3-sSm0jFWTNud4XKGtwv81CokUkqymV_Y_-n5voR65-bDBaOic9sGiwhcX"
 
 
 function discordMessagePSX(c, title, text)
