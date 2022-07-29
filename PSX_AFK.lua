@@ -97,7 +97,7 @@ v()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Scripts/main/WebhookScript_PSX.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Scripts/main/NotificationScript.lua"))()
-Notify("Script executed!", "If you see this then you know the script launched lmao", 10)
+Notify("Script executed!", "If you see this then you know the script launched lmao", 30)
 discordMessagePSX("<@&987797253869686804>", "Script executed!", lp.DisplayName.." has executed the script.")
 
 local text = 'a EXCLUSIVE'
