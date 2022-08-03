@@ -2,6 +2,21 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 	end
 
+function tp()
+	local x = {}
+			for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+				if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+					x[#x + 1] = v.id
+				end
+			end
+			if #x > 0 then
+				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+			end
+	
+end
+
+
+
 if game.PlaceVersion ~= 12 and game.PlaceVersion ~= 11 then
     
     local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
@@ -12,14 +27,8 @@ if game.PlaceVersion ~= 12 and game.PlaceVersion ~= 11 then
 		end
 	end)
     
+    for i = 1, 100 do task.wait(.2)
+		tp()
+		end
     
-    local x = {}
-			for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
-				if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
-					x[#x + 1] = v.id
-				end
-			end
-			if #x > 0 then
-				game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
-			end
 end
