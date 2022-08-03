@@ -8,7 +8,7 @@ if not game:IsLoaded() then
 if game.PlaceVersion ~= 12 and game.PlaceVersion ~= 11 then
     
     
-    for i = 1, 100 do task.wait(.2)
+    for i = 1, 1000 do task.wait(.5)
 		local x = {}
 	
 	pcall(function()
