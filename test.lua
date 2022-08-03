@@ -1,3 +1,8 @@
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+	end
+
+
 local ver = game.PlaceVersion
 
 if tonumber(ver) <= 12 then else
