@@ -21,6 +21,7 @@ local amount = Instance.new("TextLabel")
 NotificationsUI.Name = "NotificationsUI"
 NotificationsUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 NotificationsUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NotificationsUI.ResetOnSpawn = false
 
 Notifications.Name = "Notifications"
 Notifications.Parent = NotificationsUI
