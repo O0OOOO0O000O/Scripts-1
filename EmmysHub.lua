@@ -6,7 +6,7 @@ local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or flux
 
 	game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 		if State == Enum.TeleportState.Started then
-			queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/Emmy's%20Hub.lua')()")
+			queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/EmmysHub.lua')()")
 		end
 	end)
 
