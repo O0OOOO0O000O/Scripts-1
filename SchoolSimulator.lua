@@ -153,11 +153,13 @@ if Running == true then
 	local k = coroutine.wrap(function()
 		while true do
 			task.wait(5)
+			pcall(function()
 			if Username == nil or Username == '' then else
 				local Req = game.HttpService:JSONDecode(game:HttpGet("https://api.roblox.com/users/"..game.Players:GetUserIdFromNameAsync(Username).."/onlinestatus"))
 
 				a.Value = Req.LastLocation
-			end
+				end
+				end)
 		end
 	end)
 	k()
