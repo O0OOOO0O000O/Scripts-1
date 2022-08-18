@@ -8,7 +8,7 @@ pcall(function()
 if getgenv().VS_LOADED then
 	running = false
 else
-	getgenv.VS_LOADED = true
+	getgenv().VS_LOADED = true
 end
 end)
 
