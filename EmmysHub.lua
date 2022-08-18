@@ -178,8 +178,6 @@ if Running == true then
 
 		SSTab:AddTextLabel'- Main -'
 
-		local buttons = SSTab:AddTextLabel('- Buttons -')
-
 		local lp = game.Players.LocalPlayer
 		local mouse = lp:GetMouse()
 		local lastpos
