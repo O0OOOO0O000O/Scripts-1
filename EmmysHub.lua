@@ -2,6 +2,21 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
+local running = false
+
+if getgenv().VS_LOADED == true then
+	running = false
+else
+	getgenv.VS_LOADED = true
+end
+
+
+if running == true then
+
+
+
+
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
 
 
@@ -665,3 +680,4 @@ function join()
 	ooo()
 	--end
 end
+	end
