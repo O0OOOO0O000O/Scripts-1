@@ -2,14 +2,6 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
-
-	game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-		if State == Enum.TeleportState.Started then
-			queueteleport("loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/EmmysHub.lua')()")
-		end
-	end)
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Emcept/Emmy-s-UI-Library/main/Emmy's-UI-Library.lua"))()
 
 
@@ -87,24 +79,27 @@ local h = false
 local hideOthersTgl = BasicTab:AddToggle('Hide Other Players', 'Hides other players', false, function()
 	if h == false then
 		h = true
-		task.spawn(function()	
-			while true do task.wait() if h == true then
-				local pnames = {}
-				for i, v in pairs(game.Players:GetPlayers()) do
-					if v.Name ~= game.Players.LocalPlayer.Name then
-						table.insert(pnames, v.Name)
+		local ccc = coroutine.wrap(function()	
+			while true do task.wait()
+				if h == true then
+					local pnames = {}
+					for i, v in pairs(game.Players:GetPlayers()) do
+						if v.Name ~= game.Players.LocalPlayer.Name then
+							table.insert(pnames, v.Name)
+						end
+					end
+					for i, v in pairs(pnames) do
+						pcall(function()
+							workspace[v].Parent = game.ReplicatedStorage
+						end)
 					end
 				end
-				for i, v in pairs(pnames) do
-					pcall(function()
-						workspace[v].Parent = game.ReplicatedStorage
-					end)
-				end end
 			end
 		end)
+		ccc()
 	else
 		h = false
-		task.spawn(function()
+		local hhh = coroutine.wrap(function()
 			local pnames = {}
 			for i, v in pairs(game.Players:GetPlayers()) do
 				if v.Name ~= game.Players.LocalPlayer.Name then
@@ -117,6 +112,7 @@ local hideOthersTgl = BasicTab:AddToggle('Hide Other Players', 'Hides other play
 				end)
 			end
 		end)
+		hhh()
 	end
 end)
 
@@ -625,7 +621,7 @@ function join()
 	data = http_service:JSONDecode(data.Body)
 	index = index + 1
 	cursor = data.nextPageCursor
-	task.spawn(function()
+	local ooo = coroutine.wrap(function()
 		for _, server in pairs(data.data) do
 			local server_data = {}
 			for i = 1, #server.playerTokens do
@@ -666,5 +662,6 @@ function join()
 
 		end
 	end)
+	ooo()
 	--end
 end
