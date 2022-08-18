@@ -2,18 +2,18 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-local running = false
+local Running = false
 
 pcall(function()
 if getgenv().VS_LOADED == true then
-	running = false
+	Running = false
 else
 	getgenv().VS_LOADED = true
 end
 end)
 
 
-if running == true then
+if Running == true then
 
 
 
