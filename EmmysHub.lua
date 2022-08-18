@@ -5,7 +5,7 @@ end
 local running = false
 
 pcall(function()
-if getgenv().VS_LOADED then
+if getgenv().VS_LOADED == true then
 	running = false
 else
 	getgenv().VS_LOADED = true
