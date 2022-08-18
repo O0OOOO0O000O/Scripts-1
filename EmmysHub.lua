@@ -2,7 +2,7 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-local Running = false
+local Running = true
 
 pcall(function()
 if getgenv().VS_LOADED == true then
