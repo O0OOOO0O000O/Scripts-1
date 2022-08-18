@@ -19,17 +19,20 @@ local req = (syn and syn.request) or http and http.request or http_request or (f
 local Window = Library:AddWindow('Versats', 'Purple')
 
 local BasicTab = Window:AddTab('Basic')
+local SteamSniperTab = Window:AddTab('Steam Sniper')
+local PlayerSpyTab = Window:AddTab('Player Spy')
 
-BasicTab:AddTextLabel'- Steam Sniper -'
+BasicTab:AddTextLabel'- Basic -'
+SteamSniperTab:AddTextLabel'- Steam Sniper -'
 
 local user_id = nil
 local game_id = nil
 
-local playerInput = BasicTab:AddTextBox('Player', "The player's name that you want to join", 'Type here...', function(input)
+local playerInput = SteamSniperTab:AddTextBox('Player', "The player's name that you want to join", 'Type here...', function(input)
 	user_id = tostring(game.Players:GetUserIdFromNameAsync(input))
 end)
 
-local placeIdInput = BasicTab:AddTextBox('Place ID', "The game's ID you think the player you want to join might be in", 'Type here...', function(input)
+local placeIdInput = SteamSniperTab:AddTextBox('Place ID', "The game's ID you think the player you want to join might be in", 'Type here...', function(input)
 	game_id = tostring(input)
 end)
 
@@ -39,10 +42,22 @@ end)
 
 
 
-local joinButton = BasicTab:AddTextButton('Join Player', 'Attempt to join the player', function()
+local joinButton = SteamSniperTab:AddTextButton('Join Player', 'Attempt to join the player', function()
 	join()
 end)
 
+local walkSpeedSlider = BasicTab:AddSlider("WalkSpeed", "Changes your WalkSpeed", 16, 200, function(speed)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
+end)
+
+local jumpPowerSlider = BasicTab:AddSlider('JumpPower', 'Changes your JumpPower', 0, 300, function(power)
+	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+	game.Players.LocalPlayer.Character.Humanoid.JumpPower = power
+end)
+
+local GravitySlider = BasicTab:AddSlider('Gravity', 'Changes your Gravity', 0, 196.2, function(grav)
+	workspace.Gravity = grav
+end)
 
 local rejoinButton = BasicTab:AddTextButton('Rejoin', 'Rejoins the server', function()
 	local Players = game.Players
@@ -65,19 +80,6 @@ local serverHopButton = BasicTab:AddTextButton('Server Hop', 'Joins another serv
 	if #x > 0 then
 		game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
 	end
-end)
-
-local Slider = BasicTab:AddSlider("WalkSpeed", "Changes your WalkSpeed", 16, 200, function(speed)
-	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
-end)
-
-local jumpPowerSlider = BasicTab:AddSlider('JumpPower', 'Changes your JumpPower', 0, 300, function(power)
-	game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
-	game.Players.LocalPlayer.Character.Humanoid.JumpPower = power
-end)
-
-local GravitySlider = BasicTab:AddSlider('Gravity', 'Changes your Gravity', 0, 196.2, function(grav)
-	workspace.Gravity = grav
 end)
 
 local h = false
@@ -118,10 +120,42 @@ local hideOthersTgl = BasicTab:AddToggle('Hide Other Players', 'Hides other play
 	end
 end)
 
+PlayerSpyTab:AddTextLabel('- Player Spy -')
+local Username = ""
+PlayerSpyTab:AddTextBox('Player', "Put the player's username you want to spy on here", 'Type here...', function(input)
+	Username = tostring(input)
+end)
+
+loadstring(game:HttpGet"https://raw.githubusercontent.com/Emcept/Scripts/main/NotificationScript.lua")()
+
+local a = Instance.new("StringValue")
+
+
+local k = coroutine.wrap(function()
+	while true do
+		task.wait(5)
+
+		local Req = game.HttpService:JSONDecode(game:HttpGet("https://api.roblox.com/users/"..game.Players:GetUserIdFromNameAsync(Username).."/onlinestatus"))
+
+		a.Value = Req.LastLocation
+
+	end
+end)
+k()
+
+
+a.Changed:Connect(function()
+	local Req = game.HttpService:JSONDecode(game:HttpGet("https://api.roblox.com/users/"..game.Players:GetUserIdFromNameAsync(Username).."/onlinestatus"))
+	Notify("Status Changed", Username.." is now "..Req.LastLocation, 9999999999999999)
+end)
+
+
 
 
 if game.PlaceId == 7280118908 then                    -- // SCHOOL SIMULATOR // --
-	local SSTab = Window:AddTab('School Sim')
+	local SSTab = Window:AddTab('Main')
+	
+	SSTab:AddTextLabel'- Main -'
 	
 	local buttons = SSTab:AddTextLabel('- Buttons -')
 	
@@ -439,8 +473,48 @@ function keypress(key)
 	
 	
 	
+	local Teleports = Window:AddTab('Teleports')
 	
 	
+	local firstFloorBtn = Teleports:AddTextButton('First Floor', 'Teleports you to the first floor', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-30, 4, 21)
+	end)
+	
+	local secondFloorBtn = Teleports:AddTextButton('Second Floor', 'Teleports you to the second floor', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31, 18, -11)
+	end)
+	
+	local classroom1Btn = Teleports:AddTextButton('Classroom 1', 'Teleports you to the first classroom', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 4, -2)
+	end)
+	
+	local classroom2Btn = Teleports:AddTextButton('Classroom 2', 'Teleports you to the second classroom', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57, 4, 16)
+	end)
+	
+	local classroom3Btn = Teleports:AddTextButton('Classroom 3', 'Teleports you to the third classroom', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6, 18, -25)
+	end)
+	
+	local gymBtn = Teleports:AddTextButton('Gym', 'Teleports you to the gym', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6, 4, 64)
+	end)
+	
+	local secretLockerBtn = Teleports:AddTextButton('Secret Locker', 'Teleports you to the secret locker', function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28, 4, 17)
+	end)
+	
+	local janitorsClosetBtn = Teleports:AddTextButton("Janitor's Closet", "Teleports you to the janitor's closet", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-49, 18, 14)
+	end)
+	
+	local theOffice = Teleports:AddTextButton("The Office", "Teleports you to the office", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-32, 4, 44)
+	end)
+	
+	local outsideTheMap = Teleports:AddTextButton("Outside The Map", "Teleports you outside the map", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48, 34, -22)
+	end)
 	
 	
 	
