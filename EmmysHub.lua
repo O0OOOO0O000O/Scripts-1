@@ -455,12 +455,6 @@ if Running == true then
 		local toggleLockAllKB = SSTab:AddKeybind('Toggle Lock All Keybind', 'Locks all unlocked lockers and unlocks all locked lockers after the key is pressed', 'Z', function()
 			togglelockall()
 		end)
-		
-		local toggleUIKB = SSTab:AddKeybind('Toggle UI Keybind', 'Toggles the UI', 'G', function()
-			Window:ToggleUI()
-		end)
-
-
 
 		local bringBoardKB = SSTab:AddKeybind('Bring Board Keybind', 'Brings a board after the key is pressed', 'K', function()
 			if game.Workspace:FindFirstChild(name) then
@@ -495,8 +489,10 @@ if Running == true then
 				game.Workspace:FindFirstChild(name).CFrame = j
 			end
 		end)
-
-
+		
+		local toggleUIKB = SSTab:AddKeybind('Toggle UI Keybind', 'Toggles the UI', 'F', function()
+			Window:ToggleUI()
+		end)
 
 		local Teleports = Window:AddTab('Teleports')
 
