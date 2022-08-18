@@ -153,11 +153,13 @@ if Running == true then
 	local k = coroutine.wrap(function()
 		while true do
 			task.wait(5)
-if Username == nil or Username == '' then else
-			local Req = game.HttpService:JSONDecode(game:HttpGet("https://api.roblox.com/users/"..game.Players:GetUserIdFromNameAsync(Username).."/onlinestatus"))
+			pcall(function()
+			if Username == nil or Username == '' then else
+				local Req = game.HttpService:JSONDecode(game:HttpGet("https://api.roblox.com/users/"..game.Players:GetUserIdFromNameAsync(Username).."/onlinestatus"))
 
-			a.Value = Req.LastLocation
-end
+				a.Value = Req.LastLocation
+				end
+				end)
 		end
 	end)
 	k()
@@ -453,6 +455,10 @@ end
 		local toggleLockAllKB = SSTab:AddKeybind('Toggle Lock All Keybind', 'Locks all unlocked lockers and unlocks all locked lockers after the key is pressed', 'Z', function()
 			togglelockall()
 		end)
+		
+		local toggleUIKB = SSTab:AddKeybind('Toggle UI Keybind', 'Toggles the UI', 'G', function()
+			Window:ToggleUI()
+		end)
 
 
 
@@ -517,6 +523,10 @@ end
 
 		local gymBtn = Teleports:AddTextButton('Gym', 'Teleports you to the gym', function()
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6, 4, 64)
+		end)
+		
+		local endOfTheObbyBtn = Teleports:AddTextButton('End Of The Obby', 'Teleports you to the end of the obby', function()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17, 18, 92)
 		end)
 
 		local secretLockerBtn = Teleports:AddTextButton('Secret Locker', 'Teleports you to the secret locker', function()
