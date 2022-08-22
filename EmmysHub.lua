@@ -74,6 +74,8 @@ if Running == true then
 		workspace.Gravity = grav
 	end)
 
+    
+
 	local rejoinButton = BasicTab:AddTextButton('Rejoin', 'Rejoins the server', function()
 		local Players = game.Players
 		if #Players:GetPlayers() <= 1 then
@@ -138,6 +140,38 @@ if Running == true then
 			hhh()
 		end
 	end)
+
+    local Clip = false
+    local Noclipping
+    
+    function NoclipLoop()
+    if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+    for i, child in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+    if child:IsA("BasePart") and child.CanCollide == true then child.CanCollide = false
+    end
+    end
+    end
+    end
+    
+    local nToggle = BasicTab:AddToggle("Noclip", "Gives you ability to walk through walls", false, function(state)
+    
+    local success, err = pcall(function()
+    if state == true then
+    Clip = false
+    Noclipping = game:GetService 'RunService'.Stepped:Connect(NoclipLoop)
+    
+    else
+    
+    if Noclipping then Noclipping:Disconnect()
+    end
+    Clip = true
+    
+    end
+    end)
+    if err then
+    warn(err)
+    end
+    end)
 
 	PlayerSpyTab:AddTextLabel('- Player Spy -')
 	local Username = ""
@@ -540,6 +574,44 @@ if Running == true then
 		end)
 
 
+        local Loops = Window:AddTab('Loops')
+
+local loops = {
+LOCK = false,
+UNLOCK = false,
+TOGGLELOCK = false
+}
+
+local toggleLockLoop = Loops:AddToggle('Toggle Lock Loop', 'Idk what to put here xd', false, function(state)
+loops.TOGGLELOCK = state
+end)
+
+local lockLoop = Loops:AddToggle('Lock Loop', 'Idk what to put here xd', false, function(state)
+loops.LOCK = state
+end)
+
+local unlockLoop = Loops:AddToggle('Unlock Loop', 'Idk what to put here xd', false, function(state)
+loops.UNLOCK = state
+end)
+
+coroutine.wrap(function()
+while true do
+task.wait()
+
+if loops.LOCK then
+lockall()
+end
+
+if loops.UNLOCK then
+unlockall()
+end
+
+if loops.TOGGLELOCK then
+togglelockall()
+end
+
+end
+end)()
 
 
 
