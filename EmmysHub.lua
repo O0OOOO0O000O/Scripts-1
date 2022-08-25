@@ -417,7 +417,7 @@ if Running == true then
 		local name = 'board lmao'
 		local j = nil
 
-		local bringBoard = SSTab:AddTextButton('Bring Board Keybind', 'Brings the board to you', function()
+		local bringBoard = SSTab:AddTextButton('Bring Board', 'Brings the board to you', function()
 			if game.Workspace:FindFirstChild(name) then
 				task.wait()
 				game.Workspace:FindFirstChild(name).CFrame = game.Players.LocalPlayer.Character.Head.CFrame
