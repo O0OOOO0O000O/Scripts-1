@@ -417,7 +417,7 @@ if Running == true then
 		local name = 'board lmao'
 		local j = nil
 
-		local bringBoardKB = SSTab:AddTextButton('Bring Board Keybind', 'Brings a board after the key is pressed', function()
+		local bringBoard = SSTab:AddTextButton('Bring Board Keybind', 'Brings the board to you', function()
 			if game.Workspace:FindFirstChild(name) then
 				task.wait()
 				game.Workspace:FindFirstChild(name).CFrame = game.Players.LocalPlayer.Character.Head.CFrame
@@ -443,7 +443,7 @@ if Running == true then
 
 		end)
 
-		local d = SSTab:AddTextButton('Put Back Board Keybind', 'Puts the board back where it was after the key is pressed', function()
+		local putBackBoard = SSTab:AddTextButton('Put Back Board', 'Puts the board back to where it originally was', function()
 			if game.Workspace:FindFirstChild(name) then
 				game.Workspace:FindFirstChild(name).Transparency = 0
 				game.Workspace:FindFirstChild(name).CanCollide = true
@@ -488,7 +488,7 @@ if Running == true then
 			togglelockall()
 		end)
 
-		local bringBoardKB = SSTab:AddKeybind('Bring Board Keybind', 'Brings a board after the key is pressed', 'K', function()
+		local bringBoardKB = SSTab:AddKeybind('Bring Board Keybind', 'Brings the board to you after the key is pressed', 'K', function()
 			if game.Workspace:FindFirstChild(name) then
 				task.wait()
 				game.Workspace:FindFirstChild(name).CFrame = game.Players.LocalPlayer.Character.Head.CFrame
@@ -514,7 +514,7 @@ if Running == true then
 
 		end)
 
-		local d = SSTab:AddKeybind('Put Back Board Keybind', 'Puts the board back where it was after the key is pressed', 'L', function()
+		local d = SSTab:AddKeybind('Put Back Board Keybind', 'Puts the board back to where it originally was after the key is pressed', 'L', function()
 			if game.Workspace:FindFirstChild(name) then
 				game.Workspace:FindFirstChild(name).Transparency = 0
 				game.Workspace:FindFirstChild(name).CanCollide = true
