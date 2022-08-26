@@ -355,9 +355,13 @@ if Running == true then
 			game:GetService'VirtualInputManager':SendKeyEvent(false, Enum.KeyCode[key], false, nil)
 		end
 
+		local ragdoll = SSTab:AddTextButton('Ragdoll', 'Ragdolls you', function()
+			game.Players.LocalPlayer.Character.Config.Ragdoll:FireServer()
+		end)
 
-
-
+		local unragdoll = SSTab:AddTextButton('Unragdoll', 'Unragdolls you', function()
+			game.Players.LocalPlayer.Character.Config.Unragdoll:InvokeServer()
+		end)
 
 		local unlockTools = SSTab:AddTextButton('Unlock Tools', 'Gives you free tools', function()
 			pcall(function()
@@ -460,6 +464,14 @@ if Running == true then
 
 
 		local keybinds = SSTab:AddTextLabel('- Keybinds -')
+
+		local ragdollKB = SSTab:AddTextButton('Ragdoll', 'Ragdolls you after the key is pressed', 'T', function()
+			game.Players.LocalPlayer.Character.Config.Ragdoll:FireServer()
+		end)
+
+		local unragdollKB = SSTab:AddTextButton('Unragdoll', 'Unragdolls you after the key is pressed', 'Y', function()
+			game.Players.LocalPlayer.Character.Config.Unragdoll:InvokeServer()
+		end)
 
 		local lockKB = SSTab:AddKeybind('Lock Keybind', 'Locks / unlocks the locker which your mouse is pointed at', 'V', function()
 			lock()
@@ -577,6 +589,8 @@ if Running == true then
 		local outsideTheMap = Teleports:AddTextButton("Outside The Map", "Teleports you outside the map", function()
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48, 34, -22)
 		end)
+
+		
 
 
         local Loops = Window:AddTab('Loops')
