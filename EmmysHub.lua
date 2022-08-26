@@ -34,7 +34,8 @@ if Running == true then
 	local Window = Library:AddWindow('Versats', 'Purple')
 	
 	Window:OnClose(function()
-		getgenv().VS_LOADED = false	
+		getgenv().VS_LOADED = false
+			print("Closed the UI")
 	end)
 
 	local BasicTab = Window:AddTab('Basic')
