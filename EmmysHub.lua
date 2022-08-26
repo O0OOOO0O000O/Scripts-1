@@ -387,9 +387,18 @@ if Running == true then
 		end)
 
 		local getRedDuck = SSTab:AddTextButton('Get Red Duck', 'Gives you red duck', function()
+			local oldpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			wait()
 			game.Lighting.E:FireServer()
-			wait(1)
+			wait()
 			local Players = game.Players
+			local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+			game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+			if State == Enum.TeleportState.Started then
+			queueteleport("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos")
+			end
+			end)
+				
 			if #Players:GetPlayers() <= 1 then
 				Players.LocalPlayer:Kick("\nRejoining...")
 				wait()
