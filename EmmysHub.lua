@@ -35,7 +35,7 @@ if Running == true then
 	
 	Window:OnClose(function()
 		getgenv().VS_LOADED = false
-			print("Closed the UI")
+		print("Closed the UI")
 	end)
 
 	local BasicTab = Window:AddTab('Basic')
