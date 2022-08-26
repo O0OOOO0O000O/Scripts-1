@@ -395,7 +395,10 @@ if Running == true then
 			local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 			game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 			if State == Enum.TeleportState.Started then
+			if not game.Players.LocalPlayer:FindFirstChild'Character':FindFirstChild'HumanoidRootPart' then
+			game.Players.LocalPlayer:FindFirstChild'Character':FindFirstChild'HumanoidRootPart':Wait()				
 			queueteleport("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos")
+			end
 			end
 			end)
 				
