@@ -396,11 +396,9 @@ if Running == true then
 			game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 			if State == Enum.TeleportState.Started then
 			pcall(function()
-			if not game.Players.LocalPlayer.Character.HumanoidRootPart then
-			game.Players.LocalPlayer:FindFirstChild'Character':FindFirstChild'HumanoidRootPart':Wait()
+			game:GetService('Players').LocalPlayer.CharacterAdded:Wait()
 			wait(.1)
 			queueteleport("game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos")
-			end
 			end)
 			end
 			end)
