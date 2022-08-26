@@ -396,8 +396,7 @@ if Running == true then
 			game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 			if State == Enum.TeleportState.Started then
 			queueteleport([[
-			game:GetService('Players').LocalPlayer.CharacterAdded:Wait()
-			wait(.1)
+			wait(1.75)
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldpos
 			]])
 			end
