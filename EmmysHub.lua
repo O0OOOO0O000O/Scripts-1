@@ -465,11 +465,11 @@ if Running == true then
 
 		local keybinds = SSTab:AddTextLabel('- Keybinds -')
 
-		local ragdollKB = SSTab:AddTextButton('Ragdoll', 'Ragdolls you after the key is pressed', 'T', function()
+		local ragdollKB = SSTab:AddKeybind('Ragdoll Keybind', 'Ragdolls you after the key is pressed', 'T', function()
 			game.Players.LocalPlayer.Character.Config.Ragdoll:FireServer()
 		end)
 
-		local unragdollKB = SSTab:AddTextButton('Unragdoll', 'Unragdolls you after the key is pressed', 'Y', function()
+		local unragdollKB = SSTab:AddKeybind('Unragdoll Keybind', 'Unragdolls you after the key is pressed', 'Y', function()
 			game.Players.LocalPlayer.Character.Config.Unragdoll:InvokeServer()
 		end)
 
