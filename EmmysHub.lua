@@ -32,6 +32,10 @@ if Running == true then
 
 
 	local Window = Library:AddWindow('Versats', 'Purple')
+	
+	Window:OnClose(function()
+		getgenv().VS_LOADED = false	
+	end)
 
 	local BasicTab = Window:AddTab('Basic')
 	local SteamSniperTab = Window:AddTab('Steam Sniper')
