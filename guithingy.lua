@@ -125,6 +125,7 @@ local DrawQuad; do
 			p0.CanCollide = false
 			p0.Material = _G.MATERIAL
 			p0.Size = Vector3.new(sz, sz, sz)
+			p0.CastShadow = false
 			local mesh = Instance.new('SpecialMesh', p0)
 			mesh.MeshType = 2
 			mesh.Name = 'WedgeMesh'
