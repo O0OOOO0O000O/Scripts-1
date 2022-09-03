@@ -1,32 +1,5 @@
---[[
-i didn't make the script, all credits go to it's owner
-add _G.MATERIAL = 'Glass' before using
-
-
-example:
-
-local gui_thingy = loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/gui-thingy.lua')()
-gui_thingy:BindFrame(script.Parent, {
-	Transparency = 0.99;
-	BrickColor = BrickColor.new('Institutional white');
-})
-
-
-]]
-
-
-
-
-
-
-
-
-
-
 -- fractality
 
-
-local module = {}
 
 
 local RunService = game:GetService'RunService'
@@ -141,7 +114,7 @@ end
 
 
 -- Create a part binding for a GuiObject.
-function module:BindFrame(frame, properties)
+function BindFrame(frame, properties)
 	if binds[frame] then
 		return binds[frame].parts
 	end
@@ -163,7 +136,7 @@ function module:BindFrame(frame, properties)
 	end
 	
 	local function UpdateOrientation(fetchProps)
-		local zIndex = 1 - 0.05*frame.ZIndex
+		local zIndex = 1 - 0.3*frame.ZIndex
 		-- the transparency inversion bug still surfaces when there's z-fighting
 		local tl, br = frame.AbsolutePosition, frame.AbsolutePosition + frame.AbsoluteSize
 		local tr, bl = Vector2.new(br.x, tl.y), Vector2.new(tl.x, br.y)
@@ -173,7 +146,7 @@ function module:BindFrame(frame, properties)
 				rot = rot + v.Rotation
 			end
 			if rot ~= 0 and rot%180 ~= 0 then
-				local mid = tl:lerp(br, 1)
+				local mid = tl:lerp(br, 0.5)
 				local s, c = math.sin(math.rad(rot)), math.cos(math.rad(rot))
 				local vec = tl
 				tl = Vector2.new(c*(tl.x - mid.x) - s*(tl.y - mid.y), s*(tl.x - mid.x) + c*(tl.y - mid.y)) + mid
@@ -212,8 +185,8 @@ function module:BindFrame(frame, properties)
 end
 
 -- Applies the `properties` table to bound parts.
-function module:Modify(frame, properties)
-	local parts = module:GetBoundParts(frame)
+function Modify(frame, properties)
+	local parts = GetBoundParts(frame)
 	if parts then
 		for propName, propValue in pairs(properties) do
 			for _, pt in pairs(parts) do
@@ -226,7 +199,7 @@ function module:Modify(frame, properties)
 end
 
 -- Removes the part binding from a gui object if one exists.
-function module:UnbindFrame(frame)
+function UnbindFrame(frame)
 	local cb = binds[frame]
 	if cb then
 		RunService:UnbindFromRenderStep(cb.uid)
@@ -240,14 +213,13 @@ function module:UnbindFrame(frame)
 end
 
 -- Returns true if a part binding exists for the gui object.
-function module:HasBinding(frame)
+function HasBinding(frame)
 	return binds[frame] ~= nil
 end
 
 -- Returns an array using this.
-function module:GetBoundParts(frame)
+function GetBoundParts(frame)
 	return binds[frame] and binds[frame].parts
 end
 
 
-return module
