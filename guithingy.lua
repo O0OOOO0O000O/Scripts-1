@@ -4,8 +4,9 @@ add _G.MATERIAL = 'Glass' before using
 
 
 example:
+
 local gui_thingy = loadstring(game:HttpGet'https://raw.githubusercontent.com/Emcept/Scripts/main/gui-thingy.lua')()
-gui_thingy:BindFrame(frame_or_any_gui_object_here, {
+gui_thingy:BindFrame(script.Parent, {
 	Transparency = 0.99;
 	BrickColor = BrickColor.new('Institutional white');
 })
