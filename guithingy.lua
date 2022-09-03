@@ -1,3 +1,41 @@
+--[[
+
+The script isn't made by me. All credits go to it's owner.
+
+TO MAKE A GUI BLURRY EFFECT:
+ADD THE CODE BELOW, AND SET _G.MATERIAL TO 'Glass':
+
+local DepthOfField = Instance.new("DepthOfFieldEffect")
+DepthOfField.FarIntensity = 0
+DepthOfField.FocusDistance = 51.6
+DepthOfField.InFocusRadius = 50
+DepthOfField.NearIntensity = 1
+
+DepthOfField.Parent = game:GetService("Lighting")
+
+
+
+---------------------------------------------------------------------------
+
+
+Example:
+
+_G.MATERIAL = 'Neon'
+local gui_thingy = loadstring(game:HttpGet('https://raw.githubusercontent.com/Emcept/Scripts/main/guithingy.lua'))()
+
+gui_thingy:BindFrame(Frame, {
+	Transparency = 0.1;
+	Color = Color3.fromRGB(38, 125, 255)
+})
+
+
+]]
+
+
+
+
+
+
 -- fractality
 
 
