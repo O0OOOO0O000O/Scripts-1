@@ -39,13 +39,14 @@ gui_thingy:BindFrame(Frame, {
 -- fractality
 
 
+local module = {}
+
 
 local RunService = game:GetService'RunService'
 local camera = workspace.CurrentCamera
 
---[[
 
-do
+--[[do
 	local function IsNotNaN(x)
 		return x == x
 	end
@@ -153,7 +154,7 @@ end
 
 
 -- Create a part binding for a GuiObject.
-function BindFrame(frame, properties)
+function module:BindFrame(frame, properties)
 	if binds[frame] then
 		return binds[frame].parts
 	end
@@ -175,7 +176,7 @@ function BindFrame(frame, properties)
 	end
 	
 	local function UpdateOrientation(fetchProps)
-		local zIndex = 1 - 0.3*frame.ZIndex
+		local zIndex = 1 - 0.05*frame.ZIndex
 		-- the transparency inversion bug still surfaces when there's z-fighting
 		local tl, br = frame.AbsolutePosition, frame.AbsolutePosition + frame.AbsoluteSize
 		local tr, bl = Vector2.new(br.x, tl.y), Vector2.new(tl.x, br.y)
@@ -224,8 +225,8 @@ function BindFrame(frame, properties)
 end
 
 -- Applies the `properties` table to bound parts.
-function Modify(frame, properties)
-	local parts = GetBoundParts(frame)
+function module:Modify(frame, properties)
+	local parts = module:GetBoundParts(frame)
 	if parts then
 		for propName, propValue in pairs(properties) do
 			for _, pt in pairs(parts) do
@@ -238,7 +239,7 @@ function Modify(frame, properties)
 end
 
 -- Removes the part binding from a gui object if one exists.
-function UnbindFrame(frame)
+function module:UnbindFrame(frame)
 	local cb = binds[frame]
 	if cb then
 		RunService:UnbindFromRenderStep(cb.uid)
@@ -252,13 +253,14 @@ function UnbindFrame(frame)
 end
 
 -- Returns true if a part binding exists for the gui object.
-function HasBinding(frame)
+function module:HasBinding(frame)
 	return binds[frame] ~= nil
 end
 
 -- Returns an array using this.
-function GetBoundParts(frame)
+function module:GetBoundParts(frame)
 	return binds[frame] and binds[frame].parts
 end
 
 
+return module
