@@ -43,6 +43,7 @@ gui_thingy:BindFrame(Frame, {
 local RunService = game:GetService'RunService'
 local camera = workspace.CurrentCamera
 
+--[[
 
 do
 	local function IsNotNaN(x)
@@ -53,7 +54,7 @@ do
 		RunService.RenderStepped:wait()
 		continue = IsNotNaN(camera:ScreenPointToRay(0,0).Origin.x)
 	end
-end
+end]]
 
 local binds = {}
 local root = Instance.new('Folder', camera)
