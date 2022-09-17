@@ -651,7 +651,7 @@ if _G.MyConnection then
 end
 _G.MyConnection = game.Workspace.__THINGS.Orbs.ChildAdded:Connect(function(Orb)
     game.Workspace.__THINGS.__REMOTES["claim orbs"]:FireServer({{Orb.Name}})
-    Orb.Name:Destroy()
+    pcall(function() Orb.Name:Destroy() end)
 end)
 
 local PixelList = {"Pixel Vault Vault", "Pixel Vault Safe"}
@@ -1035,10 +1035,12 @@ EnchantPets:Dropdown("Enchant Level", EnchantLevel, function(enchantlevelfunc)
 end)
 
 local PettoRarity = {}
-local a = require(game:GetService("ReplicatedStorage").Framework.Modules["1 | Directory"].Pets["Grab All Pets"])
-for i, v in pairs(a) do
+local a
+pcall(function() a = require(game:GetService("ReplicatedStorage").Framework.Modules["1 | Directory"].Pets["Grab All Pets"]) end)
+pcall(function() for i, v in pairs(a) do
     PettoRarity[i] = v.rarity
 end
+end)
 function GetPetTable(PetUID)
     for i, v in pairs(Library.Save.Get().Pets) do
         if v.uid == PetUID then
