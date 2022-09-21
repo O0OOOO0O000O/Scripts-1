@@ -54,8 +54,8 @@ v.OpenEgg = function()
 return
 end
 end
-task.wait(2)
 end
+task.wait(2)
 end
 end
 end)
