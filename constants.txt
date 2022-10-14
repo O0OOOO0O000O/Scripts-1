@@ -1,0 +1,159 @@
+-- constant dumped LOL
+-- the thing at the beggining is a part of the obfuscation, just ignore it
+
+Ľ‘’’#šbmFš’’"’˛’X’’’'ŠbmXŠ’’"‚˛’X‚’’'šbmXš’’&š˛’Xš’’+˛bmX˛’’&‚˛’X‚’’+šbmXš’’*‚˛’X‚’’/şbmXş’’*‚˛’X‚’’/šbmXš’’.Š˛’XŠ’’3˛bmX˛’’.‚˛’X‚’’3šbmXš’’2˛˛’X˛’’7şbmXş’’2‚˛’X‚’’7šbmXš’’6ş˛’Xş’’;˘bmX˘’’6‚˛’X‚’’;šbmXš’’:˘˛’X˘’’?ŞbmXŞ’’:‚˛’X‚’’?šbmXš’’>Ş˛’XŞ’’ŞbmXŞ’’>‚˛’X‚’’šbmXš’’Ň˛’XŇ’’ŞbmXŞ’’‚˛’X‚’’šbmXš’’Ú˛’XÚ’’ŇbmXŇ’’‚˛’X‚’’šbmXš’’
+Â˛’XÂ’’şbmXş’’
+‚˛’X‚’’šbmXš’’Ę˛’XĘ’’ÚbmXÚ’’‚˛’X‚’’šbmXš’’ň˛’Xň’’şbmXş’’‚˛’X‚’’šbmXš’’ú˛’Xú’’˘bmX˘’’‚˛’X‚’’šbmXš’’â˛’Xâ’’ŇbmXŇ’’‚˛’X‚’’šbmXš’’ę˛’Xę’’cşbmXş’’‚˛’X‚’’cšbmXš’’b˛’X’’gŇbmXŇ’’b‚˛’X‚’’gšbmXš’’f˛’X’’kşbmXş’’f‚˛’X‚’’kšbmXš’’j˛’X’’oŇbmXŇ’’j‚˛’X‚’’ošbmXš’’n
+˛’X
+’’sşbmXş’’n‚˛’X‚’’sšbmzš’’r2˛’x2’’w˛bmX˛’’r‚˛’X‚’’wšbmXš’’v:˛’X:’’{ŞbmXŞ’’v‚˛’X‚’’{šbmXš’’z"˛’X"’’˘bmX˘’’z‚˛’X‚’’šbmXš’’~*˛’X*’’CŞbmXŞ’’~‚˛’X‚’’CšbmXš’’BR˛’XR’’GŞbmXŞ’’B‚˛’X‚’’GšbmXš’’FZ˛’XZ’’KŞbmXŞ’’F‚˛’X‚’’KšbmXš’’JB˛’XB’’OŞbmXŞ’’J‚˛’X‚’’OĘbmXĘ’’NJR’XJ’’NJB’XJ’’NJr’XJ’’WębmXę’’NŠ˛’XŠ’’"Â"“XÂ’’ObmX’’NJ’“XJ’’NJ˛“XJ’’""“X’’"
+Ň“X
+’’&Â’’XÂ’’&:ň“X:’’ORbmXR’’NJ“XJ’’SBbmXB’’WBbmXB’’[BbmXB’’N˛˛’X˛’’&*"“X*’’OrbmXr’’NJ˛’XJ’’SzbmXz’’WbbmXb’’[jbmXj’’_bbmXb’’Nş˛’Xş’’&J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WšcmXš“’[bbmXb’’_‚cmX‚“’Nş˛’Xş’’&’#“X’“’&Šó“XŠ“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’*˛#“X˛“’*Â‚’XÂ’’.Â‚’XÂ’’ORbmXR’’NJ“XJ’’SŞcmXŞ“’WŞcmXŞ“’[ŞcmXŞ“’N˛˛’X˛’’.*"“X*’’Orbmzr’’NJ˛’pJ’’SŇcmXŇ“’WbbmXb’’[ÚcmXÚ“’_bbmXb’’Nş˛’Xş’’.J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WÂcmXÂ“’[bbmXb’’_ĘcmXĘ“’Nş˛’Xş’’.’#“X’“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’2˛#“X˛“’2Â˘’XÂ’’6ňCXň“’6Â˘’XÂ’’:ňsXň“’:ÂÂ’XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’:*"“X*’’:ę“‘Xę“’:s“X“’OrbmXr’’NJ˛’XJ’’ScmX“’WbbmXb’’[
+cmX
+“’_bbmXb’’Nş˛’Xş’’:J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W2cmX2“’[bbmXb’’_:cmX:“’Nş˛’Xş’’:’#“X’“’:"Ó“X"“’ObmX’’NJâ‘XJ’’NJ‘XJ’’:*#“X*“’:Z3‘XZ“’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WbbmXb’’[bbmXb’’N˛˛’X˛’’:J#“XJ“’:ró“Xr“’:zs‘Xz“’:jó“Xj“’>ň“–Xň“’>ÂÂ’XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’>*"“X*’’>ę“‘Xę“’>s“X“’OrbmXr’’NJ˛’XJ’’Sš`m\š’WbbmSb’’[‚`mX‚’_bbmXb’’Nş˛’Xş’’>J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WŠ`mXŠ’[bbmXb’’_:cmX:“’Nş˛’Xş’’>’#“X’“’>"Ó“X"“’ObmX’’NJâ‘XJ’’NJ‘XJ’’>*#“X*“’>Z3‘XZ“’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WbbmXb’’[bbmXb’’N˛˛’X˛’’>J#“XJ“’>ró“Xr“’>zs‘Xz“’>jó“Xj“’ÂÂ’XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’*"“X*’’ę“‘Xę“’s“X“’OrbmXr’’NJ˛’XJ’’S˛`mX˛’WbbmXb’’[ş`mXş’_bbmXb’’Nş˛’Xş’’J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W˘`mX˘’[bbmXb’’_Ş`mXŞ’Nş˛’Xş’’’#“X’“’ObmX’’NJâ‘XJ’’NJ‘XJ’’*#“X*“’Z–XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’J#“XJ“’ró“Xr“’zs‘Xz“’jó“Xj“’ň–Xň“’ÂÂ’XÂ’’ORbmXR’’NJ“XJ’’SBbmXB’’WBbmXB’’[BbmXB’’N˛˛’X˛’’*"“X*’’OrbmXr’’NJ˛’DJ’’SÂ`mvÂ’WbbmXb’’[Ę`mXĘ’_bbmXb’’Nş˛’Xş’’J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’Wň`mXň’[bbmXb’’_ú`mXú’Nş˛’Xş’’’#“X’“’ObmX’’NJâ‘XJ’’NJr–XJ’’*#“X*“’Zc–XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’J#“XJ“’ró“Xr“’zs‘Xz“’jó“Xj“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’
+˛#“X˛“’
+Â’XÂ’’ÂÂ’XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’*"“X*’’OrbmXr’’NJ˛’XJ’’S`mX’WbbmXb’’[`mX’_bbmXb’’Nş˛’Xş’’J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WŠ`mXŠ’[bbmXb’’_`mX’Nş˛’Xş’’’#“X’“’
+Đ“X
+’ObmX’’NJâ‘XJ’’NJŇ—XJ’’*#“X*“’:đ—X:’Ză—XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’J#“XJ“’ró“Xr“’zs‘Xz“’jó“Xj“’Â"’XÂ’’ň—Xň“’Â˘’XÂ’’ň—Iň“’ÂB’OÂ’’ORbmXR’’NJ“XJ’’SBbmXB’’WBbmXB’’[BbmXB’’N˛˛’X˛’’*"“X*’’OrbmXr’’NJ˛’XJ’’SB`mXB’WbbmXb’’[J`mXJ’_bbmXb’’Nş˛’Xş’’J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W2cmX2“’[bbmXb’’_r`mXr’Nş˛’Xş’’’#“X’“’ObmX’’NJâ‘XJ’’NJr–XJ’’*#“X*“’Z—XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’J#“XJ“’ró“Xr“’zs‘Xz“’jó“Xj“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’˛#“X˛“’Âr’XÂ’’bňC—Xň“’bÂB’XÂ’’ORbmXR’’NJ“XJ’’SBbmXB’’WBbmXB’’[BbmXB’’N˛˛’X˛’’b*"“X*’’OrbmXr’’NJ˛’XJ’’Sb`mXb’WbbmXb’’[j`mXj’_bbmXb’’Nş˛’Xş’’bJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W2cmX2“’[bbmXb’’_’amX’‘’Nş˛’Xş’’b’#“X’“’ObmX’’NJâ‘XJ’’NJr–XJ’’b*#“X*“’bZ”XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbm\b’’N˛˛’M˛’’bJ#“XJ“’bró“Xr“’bzs‘Xz“’bjó“Xj“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’f˛#“X˛“’fÂ’“XÂ’’jňł”Xň“’jÂB’XÂ’’ORbmXR’’NJ“XJ’’SBbmXB’’WBbmXB’’[BbmXB’’N˛˛’X˛’’j*"“X*’’OrbmXr’’NJ˛’XJ’’SB`mXB’WbbmXb’’[ŠamXŠ‘’_bbmXb’’Nş˛’Xş’’jJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W2cmX2“’[bbmXb’’_˛amX˛‘’Nş˛’Xş’’j’#“X’“’ObmX’’NJâ‘XJ’’NJr–XJ’’j*#“X*“’jZĂ”XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’jJ#“XJ“’jró“Xr“’jzs‘Xz“’jjó“Xj“’OşcmXş“’NJ˛’XJ’’SbbmXb’’W˘cmX˘“’NŠ˛’XŠ’’n˛#“X˛“’nÂ˛“XÂ’’rÂ˘’XÂ’’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’r*"“X*’’rs“X“’OrbmXr’’NJ˛’XJ’’S˘amX˘‘’WbbmXb’’[ş`mXş’_bbmXb’’Nş˛’Xş’’rJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WŞamXŞ‘’[bbm\b’’_ŇamrŇ‘’Nş˛’Xş’’r’#“X’“’vÂ˘’XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’v*"“X*’’vę“‘Xę“’vs“X“’OrbmXr’’NJ˛’XJ’’SÚamXÚ‘’WbbmXb’’[ÂamXÂ‘’_bbmXb’’Nş˛’Xş’’vJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WÂcmXÂ“’[bbmXb’’_ĘamXĘ‘’Nş˛’Xş’’v’#“X’“’ObmX’’NJâ‘XJ’’NJ‘XJ’’v*#“X*“’vZS”XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’vJ#“XJ“’vró“Xr“’vzs‘Xz“’vjó“Xj“’zňC”Xň“’zÂ˘’XÂ’’~ňs”Xň“’~Âň“XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’~*"“X*’’~ę“‘Xę“’~s“X“’OrbmXr’’NJ˛’XJ’’SęamXę‘’WbbmXb’’[amX‘’_bbmXb’’Nş˛’Xş’’~J"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’WamX‘’[bbmXb’’_amX‘’Nş˛’Xş’’~’#“X’“’~"Ó“X"“’ObmX’’NJâ‘XJ’’NJr–XJ’’~*#“X*“’~ZŁ•XZ“’ORbmXR’’NJ“DJ’’SbbmPb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’~J#“XJ“’~ró“Xr“’~zs‘Xz“’~jó“Xj“’BňÓ•Xň“’BÂň“XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’B*"“X*’’Bę“‘Xę“’Bs“X“’OrbmXr’’NJ˛’XJ’’S:amX:‘’WbbmXb’’["amX"‘’_bbmXb’’Nş˛’Xş’’BJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W*amX*‘’[bbmXb’’_RamXR‘’Nş˛’Xş’’B’#“X’“’B"Ó“X"“’ObmX’’NJâ‘XJ’’NJ‘XJ’’B*#“X*“’BZ•XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’BJ#“XJ“’Bró“Xr“’Bzs‘Xz“’Bjó“Xj“’Fň3•Xň“’FÂň“XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’X˛’’F*"“X*’’Fę“‘Xę“’Fs“X“’OrbmXr’’NJ˛’XJ’’S:amX:‘’WbbmXb’’[JamXJ‘’_bbmXb’’Nş˛’Xş’’FJ"“XJ’’OrbmXr’’NJ˛’XJ’’SbbmXb’’W*amX*‘’[bbmXb’’_RamXR‘’Nş˛’Xş’’F’#“X’“’F"Ó“X"“’ObmX’’NJâ‘HJ’’NJ‘XJ’’F*#“X*“’FZS•XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’FJ#“sJ“’Fró“{r“’Fzs‘Xz“’Fjó“Xj“’JňC•Xň“’JÂň“XÂ’’ORbmXR’’NJ“XJ’’SĘcmXĘ“’WĘcmXĘ“’[ĘcmXĘ“’N˛˛’G˛’’J*"“Y*’’Ję“‘Xę“’Js“X“’OrbmXr’’NJ˛’XJ’’S:amX:‘’WbbmXb’’[bamXb‘’_bbmXb’’Nş˛’Xş’’JJ"“sJ’’Orbmtr’’NJ˛’XJ’’SbbmXb’’W*amX*‘’[bbmXb’’_RamXR‘’Nş˛’Xş’’J’#“X’“’J"Ó“X"“’ObmX’’NJâ‘HJ’’NJ‘XJ’’J*#“X*“’JZc•XZ“’ORbmXR’’NJ“XJ’’SbbmXb’’WbbmXb’’[bbmXb’’N˛˛’X˛’’JJ#“sJ“’Jró“Ir“’Jzs‘Iz“’Jjó“Ij“’MjŤ’Qjmí"Ú’’[Ú’’S’fm|’–’Rr‚šXr’’VJ’’XJ’’R‚˛’X‚’’Rš‚’Xš’’Q’‚’Q’’"â’’[â’’W’fm|’–’Vz‚šXz’’Zr’’Xr’’V‚˛’X‚’’Vš‚’Xš’’Uš‚’Qš’"’’[’’[’fm|’–’Zb‚šXb’’^z’’Xz’’Z‚˛’X‚’’Zš‚’Xš’’Y‚‚’Q‚’"’’[’’_’fm|’–’^j‚šXj’’˘b’’Xb’’^‚˛’X‚’’^š‚’Xš’’"š’’kš’’’’’’š’’’Űüáćóüń÷’‘’’’ü÷ĺ’›’’’Áńŕ÷÷üŐçű’—’’’Ôŕó˙÷’š’’’ÇŰŃýŕü÷ŕ’”’’’Ôýţö÷ŕ’›’’’Ć÷ęćŢóđ÷ţ’’’’Ć÷ęćĐçććýü’•’’’Ć÷ęćĐýę’”’’’Âóŕ÷üć’–’’’őó˙÷’•’’’Âţóë÷ŕá’™’’’ŢýńóţÂţóë÷ŕ’ž’’’ĹóűćÔýŕŃúűţö’›’’’Âţóë÷ŕŐçű’ś’’’ČŰüö÷ęĐ÷úóäűýŕ’–’’’×üç˙’•’’’Áűđţűüő’ž’’’Ŕ÷á÷ćÝüÁâóĺü‘’’”’’’Óńćűä÷‘“’‚’’’ĐóńůőŕýçüöŃýţýŕˇ’”’’’Ńýţýŕˇ’•’’’ôŕý˙ŔŐĐ’’’’’ĎŇ’š’’’Âýáűćűýü’—’’’ÇÖű˙ 4ąˇ’=řB­’’’’’’’’qĄ¬RěÉN­’–’’’Áűč÷’’’’’˘îŇ’’’’’ăŇ’›’’’Öŕóőőóđţ÷’ž’’’Ńýŕü÷ŕŔóöűçá’–’’’ÇÖű˙’’’’’’˘Ň’’’’’ŇóŇ‡ä\rÓ­‰–ŤŇF=5­’’’’’čŇ’’’’’rýŇ’–’’’Üó˙÷’–’’’űüôý’ź’’’Ć÷ęćŢóđ÷ţęęöˇ’„’’’ĐóńůőŕýçüöĆŕóüáâóŕ÷üńë’’’’’’b­’ť’’’Đýŕö÷ŕÁűč÷Âűę÷ţ^Ě2´t3­´’­ĐH­’’’’’’ÎŇ’’’’’’ŇŇ’•’’’Äűáűđţ÷’–’’’Ôýüć’™’’’Őýćúó˙Đţóńů’–’’’Ć÷ęć’š’’’Ńú÷ńůűüő’’’’Ć÷ęćŃýţýŕˇ’’’’Ć÷ęćÁńóţ÷ö’š’’’Ć÷ęćÁűč÷’’’’’’ľŇ’™’’’Ć÷ęćĹŕóââ÷ö’’’’Ć÷ęćŢóđ÷ţˇF\M˙ÔJ­’ůš2<Fx­’’’’’2üŇ†AĹ˛€ÝE­ß­ŠrCŕX­’’’’’ýŇ’’’’’’ŮŇ’‡’’’Ĺ÷ţńý˙÷˛ćý˛ÂÁĘÖ˛äˇĽ ł’”’’’çá÷ů÷ë;¦/Ť€KI­…	ZÍűw­’’’’’2úŇ’’’’’’ÓŇ’’’’Ôŕ÷öýůóÝü÷’•’’’Çá÷˛Ů÷ë„š
+íÚßJ­©B¶ňĎĎO­’’’’’’ŃŇ’‚’’’Ńţ÷óŕĆ÷ęćÝüÔýńçá’’’’Áýçŕń÷Áóüá’ť’’’Âţóń÷úýţö÷ŕĆ÷ęć’š’’’Ů÷ë˛Ú÷ŕ÷’’’’’’•’’’đçććýüá’•’’’Ńŕ÷öűćáýśa-¬'0­Ţ‹Ş27Ys­’’’’’ŃŇ’”’’’ţýóöáń‡)Í’­'0­2ÖműY­’’’’’’ÔŇ’™’’’Ţýóö˛Áńŕűâć’–’’’˙óűü=.
+9Cu­’’’’’ĐŇ’‘’’’Ů÷ëÄś±Ň¸,F­’’’’’’’Ň’’’’’RôŇ\ŚŻ’—±Ó­Ń±»’lOî­’’’’’ŘŇ’„’’’ÂÁĘÖ˛äˇĽ ˛ż˛Ů÷ë˛Áëáć÷˙’•’’’ńŕ÷öűćá’’’’Ć÷ęćŢóđ÷ţ˘5Ý2-ŞőD­˘ÜrBŕX­’’’’’BâŇ’’’’’ÔŇ’…’’’ßóűü˛áńŕűâć˛ö÷ä÷ţýâ˙÷üć’’’’Ć÷ęćŢóđ÷ţŁ/á„ň±N­emăĐD­’’’’’˛úŇ’’’’’’ĄŇ’›’’’čóôç±§ˇˇ˘’’’’Ć÷ęćŢóđ÷ţ ţůz-ĄšN­’›’’’ßýýü±ĄŁ Ł’’’’Ć÷ęćŢóđ÷ţ¦¸~-ltr­’ź’’’Č÷ëüóţůó±˘˘˘Ł’›’’’ńýŕýçćűü÷’–’’’ĺŕóâ’–’’’ť’’’#šbmuš’’"’˛’X’’’'ŠbmXŠ’’*’’’X’’’"Š˛’XŠ’’&’Ň’X’’’&šŇ’Xš’’&šÂ’Xš’’*’Ň’X’’’*‚ň’X‚’’*‚â’X‚’’1jŤ’Qjmí"š’’[š’’*Š‚’hŠ’’"š’’kš’’•’’’’š’’’Űüáćóüń÷’‘’’’ü÷ĺ’™’’’ŢýńóţÁńŕűâć’”’’’Âóŕ÷üć’’’’Ć÷ęćŢóđ÷ţˇ’‚’’’ßýçá÷ĐçććýüŁÖýĺü’•’’’ńýüü÷ńć’“’’’µ’’’"’’’A’’’'‚bmX‚’’&š˘’Xš’’+˛bmX˛’’&‚˛’X‚’’"š‚’Xš’’"’’’X’’’"şň’Xş’’"’’’X’’’"Ş’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’"Ş"’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’"ŞR’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’'‚bmX‚’’&š˘’Xš’’+úbmXú’’/âbmXâ’’3ębmXę’’&˛˛’X˛’’"š‚’Xš’’"’’’X’’’"Ş’“XŞ’’#ÚbmXÚ’’'bmX’’"‚‚’X‚’’"’’’X’’’"ş˛“Xş’’"š’’Xš’’€’’’’’’’Ć÷ęćŃýţýŕˇ’”’’’Ńýţýŕˇ’•’’’ôŕý˙ŔŐĐ’—’’’˘ľ˘ľ˘’•’’’Äűáűđţ÷‘“’–’’’Ć÷ęć’ź’’’Ńú÷ńůűüő˛ů÷ëĽ’–’’’ĺóűć’’’’’’r­’ś’’’Ńú÷ńůűüő˛ů÷ëĽĽ’ť’’’Ńú÷ńůűüő˛ů÷ëĽĽĽ’’’’’rýŇ’’’’’’’’’’’’’’‚Ň’ž’’’Űüäóţűö˛Ů÷ëłˇˇˇˇˇˇa­‘’’’’’’‡’’’#šbm}š’’"’˛’X’’’'ŠbmXŠ’’*’’’X’’’"Š˛’XŠ’’&’Ň’X’’’&šŇ’Xš’’&šŇ’Xš’’&šÂ’Xš’’*’Ň’X’’’*‚Ň’X‚’’*‚Ň’X‚’’*‚ň’X‚’’.’Ň’X’’’.Šâ’XŠ’’.Š’XŠ’’5j˝’Qjmí"š’’[š’’"‚’’[‚’’.Š‚’hŠ’’"š’’kš’’š’’’’š’’’Űüáćóüń÷’‘’’’ü÷ĺ’™’’’ŢýńóţÁńŕűâć’”’’’Âóŕ÷üć’–’’’űüôý’•’’’ńŕ÷öűćá’‚’’’ßýçá÷ĐçććýüŁÖýĺü’•’’’ńýüü÷ńć’“’’’‹’’’"’’’K’’’"’‚’X’’’"‚˘’X‚’’"’’’X’’’"’Ň’X’’’"‚˘’X‚’’"’’’X’’’"’Â’X’’’"‚˘’X‚’’"’’’X’’’"’ň’X’’’"‚˘’X‚’’"š’’Xš’’"’â’X’’’"‚’X‚’’"š’’Xš’’"’’X’’’"‚’X‚’’"š’’Xš’’"’2’X’’’"‚’X‚’’"š’’Xš’’"’"’X’’’"‚’X‚’’"š’’Xš’’™’’’’•’’’Ć÷ęćĐýę’•’’’Äűáűđţ÷‘’’”’’’çá÷ů÷ë’›’’’Ć÷ęćŢóđ÷ţ’’’’Ć÷ęćŢóđ÷ţˇ’’’’Ć÷ęćŢóđ÷ţ˘‘“’’’’Ć÷ęćŢóđ÷ţŁ’’’’Ć÷ęćŢóđ÷ţ ’’’’Ć÷ęćŢóđ÷ţ¦’’’’’’’’#šbmVš’’"’˛’X’’’'ŠbmXŠ’’*’’’X’’’"Š˛’XŠ’’&’Ň’X’’’&šŇ’Xš’’&šŇ’Xš’’&šÂ’Xš’’&šň’Xš’’*’Ň’X’’’*‚â’X‚’’*‚’X‚’’1jŤ’Qjmí"š’’[š’’*Š‚’hŠ’’"š’’kš’’š’’’’š’’’Űüáćóüń÷’‘’’’ü÷ĺ’™’’’ŢýńóţÁńŕűâć’”’’’Âóŕ÷üć’–’’’űüôý’ź’’’Ć÷ęćŢóđ÷ţęęöˇ’‚’’’ßýçá÷ĐçććýüŁÖýĺü’•’’’ńýüü÷ńć’“’’’µ’’’"’’’A’’’'‚bmX‚’’&š˘’Xš’’+˛bmX˛’’&‚˛’X‚’’"š‚’Xš’’"’’’X’’’"şň’Xş’’"’’’X’’’"Ş’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’"Ş"’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’"ŞR’XŞ’’#ÚbmXÚ’’'ÂbmXÂ’’"‚‚’X‚’’"’’’X’’’'‚bmX‚’’&š˘’Xš’’+úbmXú’’/âbmXâ’’3ębmXę’’&˛˛’X˛’’"š‚’Xš’’"’’’X’’’"Ş’“XŞ’’#ÚbmXÚ’’'bmX’’"‚‚’X‚’’"’’’X’’’"ş˛“Xş’’"š’’Xš’’€’’’’’’’Ć÷ęćŃýţýŕˇ’”’’’Ńýţýŕˇ’•’’’ôŕý˙ŔŐĐ’—’’’˘ľ˘ľ˘’•’’’Äűáűđţ÷‘“’–’’’Ć÷ęć’’’’Ńú÷ńůűüő˛ĺúűć÷ţűáćĽ’–’’’ĺóűć’’’’’’r­’†’’’Ńú÷ńůűüő˛ĺúűć÷ţűáćĽĽ’‡’’’Ńú÷ńůűüő˛ĺúűć÷ţűáćĽĽĽ’’’’’rýŇ’’’’’’’’’’’’’’‚Ň’Š’’’Çá÷ŕ˛űá˛üýć˛ĺúűć÷ţűáć÷öłˇˇˇˇˇˇa­‘’’’’’’‡’’’#šbm}š’’"’˛’X’’’'ŠbmXŠ’’*’’’X’’’"Š˛’XŠ’’&’Ň’X’’’&šŇ’Xš’’&šŇ’Xš’’&šÂ’Xš’’*’Ň’X’’’*‚Ň’X‚’’*‚Ň’X‚’’*‚ň’X‚’’.’Ň’X’’’.Šâ’XŠ’’.Š’XŠ’’5j˝’Qjmí"š’’[š’’"‚’’[‚’’.Š‚’hŠ’’"š’’kš’’š’’’’š’’’Űüáćóüń÷’‘’’’ü÷ĺ’™’’’ŢýńóţÁńŕűâć’”’’’Âóŕ÷üć’–’’’űüôý’•’’’ńŕ÷öűćá’‚’’’ßýçá÷ĐçććýüŁÖýĺü’•’’’ńýüü÷ńć’“’’’‹’’’"’’’K’’’"’‚’X’’’"‚˘’X‚’’"’’’X’’’"’Ň’X’’’"‚˘’X‚’’"’’’X’’’"’Â’X’’’"‚˘’X‚’’"’’’X’’’"’ň’X’’’"‚â’X‚’’"š’’Xš’’"’’X’’’"‚â’X‚’’"š’’Xš’’"’’X’’’"‚â’X‚’’"š’’Xš’’"’2’X’’’"‚â’X‚’’"š’’Xš’’"’"’X’’’"‚â’X‚’’"š’’Xš’’™’’’’•’’’Ć÷ęćĐýę’•’’’Äűáűđţ÷‘“’”’’’çá÷ů÷ë’›’’’Ć÷ęćŢóđ÷ţ’’’’Ć÷ęćŢóđ÷ţˇ‘’’’’’Ć÷ęćŢóđ÷ţ˘’’’’Ć÷ęćŢóđ÷ţŁ’’’’Ć÷ęćŢóđ÷ţ ’’’’Ć÷ęćŢóđ÷ţ¦’’’’’
+Instance
+new
+ScreenGui
+Frame
+UICorner
+Folder
+TextLabel
+TextButton
+TextBox
+Parent
+game
+Players
+LocalPlayer
+WaitForChild
+PlayerGui
+ZIndexBehavior
+Enum
+Sibling
+ResetOnSpawn
+Active
+BackgroundColor3
+Color3
+fromRGB
+Position
+UDim2
+Size
+Draggable
+CornerRadius
+UDim
+Name
+info
+TextLabelxxd3
+BackgroundTransparency
+BorderSizePixel
+Visible
+Font
+GothamBlack
+Text
+Checking
+TextColor3
+TextScaled
+TextSize
+TextWrapped
+TextLabel3
+Welcome to PSXD v3.2!
+usekey
+FredokaOne
+Use Key
+ClearTextOnFocus
+SourceSans
+PlaceholderText
+Key Here
+buttons
+Credits
+loadsc
+Load Script
+main
+Key
+PSXD v3.2 - Key System
+credits
+TextLabel0
+Main script development
+TextLabel1
+zafu#5330
+TextLabel2
+Moon#7121
+TextLabel4
+Zeynalka#0001
+coroutine
+wrap
+Instance
+new
+LocalScript
+Parent
+TextLabel3
+MouseButton1Down
+connect
+TextColor3
+Color3
+fromRGB
+0,0,0
+Visible
+Text
+Checking key.
+wait
+Checking key..
+Checking key...
+Invalid Key!
+Instance
+new
+LocalScript
+Parent
+info
+credits
+MouseButton1Down
+connect
+TextBox
+Visible
+usekey
+TextLabel
+TextLabel3
+TextLabel0
+TextLabel1
+TextLabel2
+TextLabel4
+Instance
+new
+LocalScript
+Parent
+info
+TextLabelxxd3
+MouseButton1Down
+connect
+TextColor3
+Color3
+fromRGB
+0,0,0
+Visible
+Text
+Checking whitelist.
+wait
+Checking whitelist..
+Checking whitelist...
+User is not whitelisted!
+Instance
+new
+LocalScript
+Parent
+info
+credits
+MouseButton1Down
+connect
+TextBox
+Visible
+usekey
+TextLabel
+TextLabel3
+TextLabel0
+TextLabel1
+TextLabel2
+TextLabel4
