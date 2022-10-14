@@ -1,5 +1,3 @@
---Auto Updating Loadstring: loadstring(game:HttpGet(("https://raw.githubusercontent.com/Emcept/Scripts/main/ShortcutMod.lua"), true))()
-
 -- CONFIG THIS BEFORE INJECTING!
 -- CONFIG THIS BEFORE INJECTING!
 -- CONFIG THIS BEFORE INJECTING!
