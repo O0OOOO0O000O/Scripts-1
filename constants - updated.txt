@@ -1,0 +1,184 @@
+Instance
+new
+ScreenGui
+Frame
+UICorner
+Folder
+TextLabel
+TextButton
+TextBox
+Name
+key
+Parent
+game
+CoreGui
+ZIndexBehavior
+Enum
+Sibling
+ResetOnSpawn
+Active
+BackgroundColor3
+Color3
+fromRGB
+Position
+UDim2
+Size
+Draggable
+CornerRadius
+UDim
+info
+TextLabelxxd3
+BackgroundTransparency
+BorderSizePixel
+Visible
+Font
+GothamBlack
+Text
+Checking
+TextColor3
+TextScaled
+TextSize
+TextWrapped
+TextLabel3
+Welcome to PSXD v3.2!
+usekey
+FredokaOne
+Use Key
+ClearTextOnFocus
+SourceSans
+PlaceholderText
+Key Here
+buttons
+Credits
+loadsc
+Load Script
+main
+Key
+updates
+Updates
+PSXD - Key System
+credits
+TextLabel1
+zafu#5330
+TextLabel2
+Moon#7121
+TextLabel4
+Zeynalka#0001
+TextLabel0
+Copy Discord link
+- Made whitelists IP + Account based.
+- Fixed detections
+- Added warning to show if theres other tradescammers in the same server
+TextLabel7
+- Added loader
+coroutine
+wrap
+Instance
+new
+LocalScript
+Parent
+TextLabel3
+MouseButton1Down
+connect
+TextColor3
+Color3
+fromRGB
+0,0,0
+Visible
+Text
+Checking key.
+wait
+Checking key..
+Checking key...
+Invalid key. If you are sure this key is valid, please try re-using it or try again later.
+Instance
+new
+LocalScript
+Parent
+info
+credits
+updates
+MouseButton1Down
+connect
+TextBox
+Visible
+usekey
+TextLabel
+TextLabel3
+TextLabel0
+TextLabel1
+TextLabel2
+TextLabel4
+TextLabel7
+Instance
+new
+LocalScript
+Parent
+info
+TextLabelxxd3
+MouseButton1Down
+connect
+TextColor3
+Color3
+fromRGB
+0,0,0
+Visible
+Text
+Checking whitelist.
+wait
+Checking whitelist..
+Checking whitelist...
+You are not whitelisted.
+Instance
+new
+LocalScript
+Parent
+info
+credits
+updates
+MouseButton1Down
+connect
+TextBox
+Visible
+usekey
+TextLabel
+TextLabel0
+TextLabel1
+TextLabel2
+TextLabel4
+TextLabel7
+Instance
+new
+LocalScript
+Parent
+info
+credits
+updates
+MouseButton1Down
+connect
+TextBox
+Visible
+usekey
+TextLabel
+TextLabel3
+TextLabel0
+TextLabel1
+TextLabel2
+TextLabel4
+TextLabel7
+Instance
+new
+LocalScript
+Parent
+MouseButton1Down
+connect
+setclipboard
+https://discord.gg/wFHKeSSRgQ
+Instance
+new
+LocalScript
+Parent
+MouseButton1Down
+connect
+setclipboard
+https://discord.gg/wFHKeSSRgQ
